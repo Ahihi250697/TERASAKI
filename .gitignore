@@ -1,4 +1,11 @@
 node_modules
-app
-*.css.map
-function.css
+*.scss
+source
+gulpfile.js
+.vscode
+package-lock.json
+*.json
+package.json
+css/sourcemap
+css/talk.css.map
+css/contributions.css.map

@@ -1,7 +1,9 @@
 @charset "UTF-8";
 body {
-  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
+  font-family: "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
   font-size: 1.6rem;
+  font-weight: 500;
+  color: #333333;
 }
 
 @media screen and (max-width: 768px) {
