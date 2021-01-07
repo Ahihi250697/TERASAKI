@@ -1,0 +1,60 @@
+@charset "utf-8";
+@import "./functions.scss";
+$font_oswald: 'Oswald',
+sans-serif;
+.hero {
+    width: 100%;
+    .hero__content {
+        width: 100%;
+        figure {
+            width: 100%;
+        }
+        @include mobile {
+            height: calc(100vh - 60px);
+            figure {
+                height: 100%;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+.cm {
+    .cm__container {
+        width: 100%;
+        max-width: 1120px;
+        min-height: 30rem;
+        transform: translateY(-100px);
+        margin: 0 auto;
+        padding-top: 5rem;
+        &.bg-white {
+            background-color: #fff;
+        }
+        @include ipadpro {
+            transform: translateY(0);
+            padding-top: 1rem;
+        }
+        @include mobile {
+            min-height: 20rem;
+        }
+    }
+    .cm__content {
+        .cm__title {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #333;
+            font-weight: 500;
+            line-height: 1.5;
+            span {
+                color: #2e6fef;
+                font-size: 3rem;
+                font-family: $font_oswald;
+                display: block;
+                letter-spacing: .1rem;
+            }
+        }
+    }
+}
