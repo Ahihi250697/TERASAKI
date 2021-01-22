@@ -1,0 +1,121 @@
+.cm .cm__box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.cm .cm__box .box {
+  width: 100%;
+  max-width: calc((100% / 3) - 20px);
+  height: 7.5rem;
+  background-color: #0f55a1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+}
+.cm .cm__box .box:hover {
+  opacity: 0.75;
+}
+.cm .cm__box .box .icon.arrow-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -8px);
+}
+
+.icon.arrow-down {
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.title {
+  font-size: 2.8rem;
+  color: #333333;
+  font-weight: 500;
+  text-align: center;
+}
+
+.border-box {
+  width: 100%;
+  border: 2px solid #404040;
+  display: flex;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+.border-box .tag-name {
+  width: 265px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.border-box .tag-description {
+  padding-left: 70px;
+  color: #000;
+  font-weight: 500;
+}
+
+.wrap {
+  width: 100%;
+  display: flex;
+}
+.wrap .wrap-item {
+  width: 100%;
+  max-width: calc(25% - 30px);
+}
+.wrap .wrap-item .heading {
+  width: 100%;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a76d3;
+  flex-direction: column;
+  position: relative;
+  color: #fff;
+  font-size: 2rem;
+}
+.wrap .wrap-item .heading::after {
+  content: "";
+  border-top: 10px solid #1a76d3;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+}
+.wrap .wrap-item .heading .meta-tag,
+.wrap .wrap-item .heading .meta-tag {
+  display: block;
+  font-size: 1.6rem;
+}
+.wrap .wrap-item .heading .meta-tag {
+  color: rgba(255, 255, 255, 0.5);
+}
+.wrap .detail .detail__item {
+  padding: 30px 40px 20px 30px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #333;
+}
+.wrap .detail .detail__item::before {
+  content: attr(data-content);
+  color: #939393;
+  font-size: 1.7rem;
+  font-weight: 700;
+  display: block;
+}
+.wrap .detail .detail__item.number_of_application {
+  margin-top: 1.2rem;
+}
+
+/*# sourceMappingURL=page_24.css.map */

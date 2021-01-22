@@ -10,7 +10,7 @@ sans-serif;
             width: 100%;
         }
         @include mobile {
-            height: calc(100vh - 60px);
+            height: 500px;
             figure {
                 height: 100%;
                 img {
@@ -27,9 +27,9 @@ sans-serif;
         width: 100%;
         max-width: 1120px;
         min-height: 30rem;
-        transform: translateY(-100px);
+        transform: translateY(-106px);
         margin: 0 auto;
-        padding-top: 5rem;
+        padding-top: 5.3rem;
         &.bg-white {
             background-color: #fff;
         }
@@ -48,13 +48,17 @@ sans-serif;
             color: #333;
             font-weight: 500;
             line-height: 1.5;
+            margin-top: 3rem;
             span {
                 color: #2e6fef;
                 font-size: 3rem;
                 font-family: $font_oswald;
                 display: block;
-                letter-spacing: .1rem;
+                letter-spacing: .15rem;
             }
         }
+    }
+    .cm__box {
+        margin-top: 9.6rem;
     }
 }

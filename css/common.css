@@ -98,7 +98,7 @@ figure img {
 }
 @media screen and (max-width: 1024px) {
   .nav .nav__navbar {
-    width: calc(375px - 40px);
+    width: 375px;
     height: calc(100vh - 60px);
     position: fixed;
     top: 60px;
