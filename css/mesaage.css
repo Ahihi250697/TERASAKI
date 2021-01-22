@@ -1,0 +1,236 @@
+.library-cm .style-title {
+    font-size: 1em;
+}
+
+.library-cm p, .library-cm dt, .library-cm dd {
+    font-size: 1.6em;
+}
+
+.library-cm .style-title .text-en {
+    font-size: 3em;
+}
+
+.library-cm .style-title .text-nihon {
+    font-size: 2.8em !important;
+}
+
+.library-cm {
+    font-size: 1rem;
+    font-size: clamp(.88rem, 5vw, 1rem);
+}
+
+.library-cm img {
+    max-width: 100%;
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.library-cm a {
+    display: block;
+    color: inherit;
+    -webkit-transition: opacity .3s ease;
+            transition: opacity .3s ease;
+}
+
+.library-cm a:hover {
+    opacity: .8;
+}
+
+.library-cm button {
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.library-cm button, .library-cm a {
+    outline: none;
+}
+
+.library-cm p {
+    line-height: 1.6;
+}
+
+.library-cm p.line-p {
+    margin: 0 auto;
+    padding: 75px 0 110px;
+    text-align: justify;
+}
+
+.library-cm .d-block {
+    display: block;
+}
+
+.library-cm .style-title {
+    letter-spacing: .4rem;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.library-cm .style-title span {
+    display: block;
+    text-align: center;
+}
+
+.library-cm .style-title .text-en {
+    font-family: 'Oswald', sans-serif;
+    color: #2e6fef;
+}
+
+.library-cm .style-title .text-nihon {
+    margin-top: 15px;
+}
+
+.library-cm .bttn-toggle {
+    position: relative;
+    z-index: 0;
+    height: 63px;
+    width: 63px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.library-cm .bttn-toggle::after, .library-cm .bttn-toggle::before {
+    border-radius: 50%;
+}
+
+.library-cm .bttn-toggle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #a3a3a3;
+    z-index: -2;
+}
+
+.library-cm .bttn-toggle::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    left: 3px;
+    z-index: -1;
+    background-color: white;
+}
+
+.library-cm .bttn-toggle span {
+    display: block;
+}
+
+.library-cm .bttn-toggle span.bttn-arrow {
+    height: 40%;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+}
+
+.library-cm .bttn-toggle span.bttn-arrow span {
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.library-cm .bttn-toggle span.bttn-arrow span::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 3px;
+    background-color: #a3a3a3;
+    display: inline-block;
+    -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+}
+
+.library-cm .bttn-toggle.active {
+    pointer-events: auto;
+}
+
+.library-cm .bttn-toggle.active::after {
+    background-color: #2e6fef;
+}
+
+.library-cm .bttn-toggle.active .bttn-arrow span::before {
+    background-color: #2e6fef;
+}
+
+.library-cm .bttn-toggle.bttn-left .bttn-arrow {
+    text-align: left;
+    padding-left: 7%;
+}
+
+.library-cm .bttn-toggle.bttn-left .bttn-arrow span:first-of-type::before {
+    -webkit-transform-origin: left bottom;
+             transform-origin: left bottom;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+}
+
+.library-cm .bttn-toggle.bttn-left .bttn-arrow span:last-of-type::before {
+    -webkit-transform-origin: left top;
+             transform-origin: left top;
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+}
+
+.library-cm .bttn-toggle.bttn-left:hover .bttn-arrow span:first-of-type::before {
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg);
+}
+
+.library-cm .bttn-toggle.bttn-left:hover .bttn-arrow span:last-of-type::before {
+    -webkit-transform: rotate(-50deg);
+            transform: rotate(-50deg);
+}
+
+.library-cm .bttn-toggle.bttn-right .bttn-arrow {
+    text-align: right;
+    padding-right: 7%;
+}
+
+.library-cm .bttn-toggle.bttn-right .bttn-arrow span:first-of-type::before {
+    -webkit-transform-origin: right bottom;
+             transform-origin: right bottom;
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+}
+
+.library-cm .bttn-toggle.bttn-right .bttn-arrow span:last-of-type::before {
+    -webkit-transform-origin: right top;
+             transform-origin: right top;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+}
+
+.library-cm .bttn-toggle.bttn-right:hover .bttn-arrow span:first-of-type::before {
+    -webkit-transform: rotate(-50deg);
+            transform: rotate(-50deg);
+}
+
+.library-cm .bttn-toggle.bttn-right:hover .bttn-arrow span:last-of-type::before {
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg);
+}
+
+@media screen and (max-width: 768px) {
+    .library-cm p.line-p {
+        padding: 40px 0 70px;
+    }
+}
+
+/*# sourceMappingURL=sourcemap/mesaage.css.map */
