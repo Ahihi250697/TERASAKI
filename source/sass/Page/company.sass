@@ -1,0 +1,245 @@
+@import ../Abstract/__variables
+@import ../Abstract/__extend
+@import ../Abstract/__mixin
+@import ../Abstract/__function
+@import ../Layout/__common
+
+.library-cm
+    .company
+        &-firtView
+            padding-bottom: 120px
+            &-linehead
+                margin-top: 95px
+        &-bulletin, &-infor
+            padding: 100px 0px
+        &-bulletin
+            background-color: $colorBg
+            &-board 
+                display: flex
+                background-color: white
+                justify-content: space-between
+                &:not(:last-of-type) 
+                    margin-bottom: 10px
+                &.odd 
+                    .company-bulletin-content
+                        max-width: 630px
+                        padding-right: 20px
+                &.even 
+                    .company-bulletin-content
+                        max-width: 670px 
+                        padding-left: 20px
+                        display: flex 
+                        flex-direction: column
+                        align-items: flex-end
+                        &>* 
+                            max-width: 610px
+                            width: 100%
+            &-title 
+                @extend %__font22
+                color: $colorBlue
+                line-height: 1.6
+                margin-bottom: 20px
+            &-content 
+                padding-top: 45px
+                padding-bottom: 20px
+                width: 100%
+                display: flex 
+                flex-direction: column
+            &-img 
+                max-width: 430px 
+                img 
+                    width: 100%
+            &-text 
+                height: 100%
+                display: flex 
+                flex-direction: column
+                justify-content: space-between
+            &-dl 
+                padding: 20px 30px 10px 30px
+                background-color: $colorBox
+                height: 150px
+            &-dt 
+                font-weight: bold
+                line-height: 1 
+                padding-bottom: 6px 
+                border-bottom: 1px solid $colorDefault
+                display: table
+            &-dd 
+                line-height: 1.6
+                margin-top: 12px
+        &-infor
+            &-wrap
+                margin-bottom: 90px
+            &-dl 
+                display: flex
+                line-height: 1.6
+                &:first-of-type
+                    dt 
+                        border-top: 1px solid $colorBlue
+                    dd 
+                        border-top: 1px solid $borderLine
+                &>*
+                    padding: 35px 0px
+            &-dt 
+                font-weight: bold 
+                @extend %__font18
+                color: $colorBlue
+                width: 260px
+                min-width: 260px
+                border-bottom: 1px solid $colorBlue
+            &-dd 
+                border-bottom: 1px solid $borderLine
+                width: 100%
+                padding-left: 50px
+                padding-right: 40px
+            &-map 
+                max-width: 1440px 
+                width: 100%
+                padding: 0px 20px
+                margin: 0px auto
+        &-trends
+            background-color: $colorBg
+            padding: 60px 0px 70px
+            &-linehead
+                text-align: center 
+                @extend %__font28
+                margin-bottom: 40px
+            &-table 
+                max-width: 930px
+                width: 100%
+                margin: 0px auto
+                display: flex
+                justify-content: space-between
+            &-dl 
+                width: 100%
+                display: flex
+                flex-direction: column
+                dd 
+                    margin-top: 1.5px
+                &>* 
+                    padding: 15px 0px 
+                    text-align: center
+                &:not(:first-of-type) 
+                    max-width: 140px 
+                    dt 
+                        background-color: $bgBox
+                    dd 
+                        background-color: white
+                        height: 100%
+                        display: flex 
+                        align-items: center 
+                        justify-content: center
+                &:first-of-type
+                    color: white 
+                    max-width: 220px
+                    font-weight: bold
+                    &>*
+                        background-color: $colorBlue
+                    dd 
+                        line-height: 1.2
+        &-history 
+            padding: 80px 0px
+            &-steps
+                margin-top: 115px
+                z-index: 0
+                display: flex
+                align-items: center 
+                justify-content: space-between
+                position: relative
+                &::before, &::after
+                    content: ''
+                    position: absolute
+                    top: 0px 
+                    height: 100%
+                    width: 30% 
+                    z-index: 1
+                &::before
+                    left: 0px
+                    background-image: linear-gradient(to right, white 30%, transparent)
+                &::after
+                    right: 0px
+                    background-image: linear-gradient(to left, white 30%, transparent)
+            &-bttn
+                position: absolute
+                z-index: 2
+                +CSSIE()
+                    top: 50%
+                    transform: translateY(-50%)
+                &.bttn-left
+                    left: 0px
+                &.bttn-right
+                    right: 0px
+            &-wrap
+                display: flex 
+                justify-content: space-between
+                max-width: 520px
+                width: 100%
+                margin: 0px auto
+                position: relative
+                align-items: center
+            &-step 
+                position: relative 
+                min-width: 18px
+                min-height: 18px
+                width: 18px 
+                height: 18px 
+                z-index: 0
+                &::before
+                    content: ''
+                    top: 0px 
+                    left: 0px 
+                    width: 100%
+                    height: 100%
+                    border-radius: 50%
+                    background-color: $colorBlue
+                    z-index: 1
+                    position: absolute
+                    transform: scale(0)
+                    transition: transform 0.3s ease
+                &.active 
+                    &::before
+                        transform: scale(1)
+            &-dot 
+                display: block 
+                width: 100%
+                height: 100%
+                border-radius: 50% 
+                border: 3px solid $corlorBorder
+            &-line 
+                display: block 
+                height: 3px
+                background-color: $corlorBorder
+                width: 100%
+                flex-shrink: 2
+                &.active 
+                    background-color: $colorBlue
+            &-year 
+                @extend %__fontDefault
+                position: absolute 
+                left: 50% 
+                bottom: calc(100% + 20px)
+                transform: translateX(-50%)
+                white-space: nowrap
+                line-height: 1
+            .year-num
+                @extend %__font26
+                @extend %__fontOswald
+            .year-text 
+                @extend %__font18
+                font-weight: bold
+                margin-left: 3px
+            &-last 
+                margin-top: 50px
+                p 
+                    text-align: center
+                    &:first-of-type
+                        @extend %__fontDefault
+                        line-height: 1
+                        padding-bottom: 10px 
+                        border-bottom: 1px solid $colorDefault
+                        display: table 
+                        margin: 0px auto
+                    &:last-of-type
+                        @extend %__font25
+                        font-weight: bold
+                        margin-top: 5px
