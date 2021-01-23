@@ -1,0 +1,7 @@
+mixin head(title, css, fonts)
+	<link rel="icon" type="image/png" href="#{path}images/commons/icon_favicon.png">
+	each val in css
+		<link href="#{path + val}" rel="stylesheet">
+	title= title
+	if fonts
+		include ../components/__fonts.pug
