@@ -48,7 +48,7 @@
   border: 2px solid #404040;
   display: flex;
   align-items: center;
-  padding: 2.5rem 0;
+  padding: 2.05rem 0;
 }
 .border-box .tag-name {
   width: 265px;
@@ -62,25 +62,33 @@
   font-weight: 500;
 }
 
+.app {
+  background-color: #edf4f4;
+  padding-top: 8.1rem;
+}
+.app .border-box {
+  line-height: 1.5;
+  margin-top: 5.6rem;
+}
+
 .wrap {
   width: 100%;
   display: flex;
 }
 .wrap .wrap-item {
   width: 100%;
-  max-width: calc(25% - 30px);
+  max-width: calc(25% - 22px);
+  margin-top: 32px;
 }
 .wrap .wrap-item .heading {
   width: 100%;
   height: 170px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #1a76d3;
-  flex-direction: column;
   position: relative;
   color: #fff;
   font-size: 2rem;
+  text-align: center;
+  padding: 32px 10px;
 }
 .wrap .wrap-item .heading::after {
   content: "";
@@ -94,28 +102,45 @@
   transform: translate(-50%, 100%);
 }
 .wrap .wrap-item .heading .meta-tag,
-.wrap .wrap-item .heading .meta-tag {
+.wrap .wrap-item .heading .meta-lead {
   display: block;
   font-size: 1.6rem;
 }
 .wrap .wrap-item .heading .meta-tag {
   color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 19px;
+}
+.wrap .wrap-item .heading .meta-lead {
+  margin-top: 7px;
 }
 .wrap .detail .detail__item {
-  padding: 30px 40px 20px 30px;
+  padding: 20px 40px 20px 30px;
   font-size: 1.6rem;
   font-weight: 700;
   color: #333;
+  line-height: 1.5;
 }
 .wrap .detail .detail__item::before {
   content: attr(data-content);
   color: #939393;
-  font-size: 1.7rem;
+  font-size: 16px;
   font-weight: 700;
   display: block;
+  margin-bottom: 3px;
+  letter-spacing: -1px;
+  white-space: nowrap;
 }
 .wrap .detail .detail__item.number_of_application {
   margin-top: 1.2rem;
+}
+.wrap .detail .detail__item.start_salary::before {
+  letter-spacing: -1.5px;
+}
+.wrap .detail .detail__item.start_salary .salary-rank {
+  display: flex;
+}
+.wrap .detail .detail__item.start_salary .salary-rank span {
+  margin-right: 1rem;
 }
 
 /*# sourceMappingURL=page_24.css.map */
