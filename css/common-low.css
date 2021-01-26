@@ -7,18 +7,6 @@
 .hero .hero__content figure {
   width: 100%;
 }
-@media screen and (max-width: 768px) {
-  .hero .hero__content {
-    height: 500px;
-  }
-  .hero .hero__content figure {
-    height: 100%;
-  }
-  .hero .hero__content figure img {
-    height: 100%;
-    object-fit: cover;
-  }
-}
 
 .cm .cm__container {
   width: 100%;
@@ -31,17 +19,7 @@
 .cm .cm__container.bg-white {
   background-color: #fff;
 }
-@media screen and (max-width: 1024px) {
-  .cm .cm__container {
-    transform: translateY(0);
-    padding-top: 1rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .cm .cm__container {
-    min-height: 20rem;
-  }
-}
+
 .cm .cm__content .cm__title {
   text-align: center;
   font-size: 2.8rem;
@@ -61,4 +39,92 @@
   margin-top: 9.6rem;
 }
 
-/*# sourceMappingURL=common-low.css.map */
+.under-mv .container {
+  padding-top: 75px;
+  background-color: #fff;
+  transform: translateY(-100px);
+}
+
+.under-mv ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 85px;
+  margin-bottom: 60px;
+}
+
+.under-mv ul li.bulkhead {
+  margin: 0 10px;
+}
+
+.under-mv ul li:first-of-type a {
+  text-decoration: underline;
+}
+
+.under-mv ul li a {
+  color: #000;
+}
+
+.under-mv h2 {
+  font-weight: bold;
+  color: #2e6fef;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.under-mv h2 span {
+  display: block;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #333;
+}
+
+.under-mv p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  max-width: 850px;
+  width: 100%;
+  margin: 40px auto 0;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .cm .cm__container {
+    transform: translateY(0);
+    padding-top: 1rem;
+  }
+  .under-mv .container {
+    transform: translateY(0);
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cm .cm__container {
+    min-height: 20rem;
+  }
+  .hero .hero__content {
+    height: 500px;
+  }
+  .hero .hero__content figure {
+    height: 100%;
+  }
+  .hero .hero__content figure img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .under-mv .container {
+    padding-top: 30px;
+  }
+
+  .under-mv .container ul {
+    margin-bottom: 30px;
+  }
+
+  .under-mv .container h2 {
+    font-size: 2.2rem;
+  }
+}

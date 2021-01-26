@@ -44,6 +44,11 @@
   font-size: 3rem;
   text-align: center;
   line-height: 1.5; }
+  .under-mv h2 span {
+    display: block;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #333; }
 .under-mv p {
   font-size: 1.6rem;
   font-weight: 500;
@@ -604,7 +609,7 @@ h2.header-title {
     width: 100%;
     height: 100%;
     background: linear-gradient(0deg, #0c4995 80%, rgba(12, 73, 149, 0.6) 100%); } }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
   .under-mv .container {
     padding-top: 30px; }
     .under-mv .container ul {
