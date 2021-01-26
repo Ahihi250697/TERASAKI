@@ -1,9 +1,7 @@
 @charset "UTF-8";
 body {
-  font-family: "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
   font-size: 1.6rem;
-  font-weight: 500;
-  color: #333333;
 }
 
 @media screen and (max-width: 768px) {
@@ -220,15 +218,15 @@ figure img {
   width: 100%;
   background-color: #2769de;
   text-align: center;
-  padding-top: 11rem;
-  padding-bottom: 8.5rem;
+  padding: 86px 0;
 }
 .footer__container .entry {
   font-family: "Oswald", sans-serif;
   font-size: 6.5rem;
   font-weight: 500;
   color: #fff;
-  letter-spacing: 0.5rem;
+  letter-spacing: 12px;
+  line-height: 1.55;
 }
 .footer__container .entry-desc {
   font-size: 1.8rem;
@@ -249,8 +247,8 @@ figure img {
 
 .copy-right {
   width: 100%;
-  padding-bottom: 3rem;
-  padding-top: 3rem;
+  min-height: 80px;
+  padding: 27px 0;
   color: #fff;
   text-align: center;
   font-size: 1.6rem;

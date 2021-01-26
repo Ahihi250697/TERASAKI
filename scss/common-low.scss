@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "./functions.scss";
+@import "../css/functions.scss";
 $font_oswald: 'Oswald',
 sans-serif;
 .hero {
@@ -54,7 +54,14 @@ sans-serif;
                 font-size: 3rem;
                 font-family: $font_oswald;
                 display: block;
-                letter-spacing: .15rem;
+                letter-spacing: 4px;
+                font-weight: 500;
+            }
+            &.big {
+                font-size: 20px;
+                span {
+                    font-size: 40px;
+                }
             }
         }
     }
