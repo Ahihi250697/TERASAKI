@@ -33,7 +33,14 @@
   font-size: 3rem;
   font-family: "Oswald", sans-serif;
   display: block;
-  letter-spacing: 0.15rem;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+.cm .cm__content .cm__title.big {
+  font-size: 20px;
+}
+.cm .cm__content .cm__title.big span {
+  font-size: 40px;
 }
 .cm .cm__box {
   margin-top: 9.6rem;
