@@ -1,0 +1,153 @@
+.reset {
+  max-width: calc(100% - 220px);
+  width: 100%;
+  margin: auto;
+  background-color: #edf4f4;
+  padding: 60px 0 30px;
+  position: relative;
+  z-index: 0; }
+  .reset__value > p {
+    font-weight: bold;
+    font-size: 2rem;
+    padding-left: 30px;
+    color: #2e6fef;
+    border-left: 2px solid #2e6fef;
+    line-height: 2; }
+  .reset__value__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(100% + 8px);
+    margin: 20px 0 40px; }
+    .reset__value__list p {
+      max-width: calc((100% - 48px) / 6);
+      width: 100%;
+      background-color: #fff;
+      color: #000;
+      font-weight: 500;
+      font-size: 1.6rem;
+      text-align: center;
+      line-height: 2.5;
+      margin-right: 8px; }
+  .reset-button {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    max-width: 200px;
+    width: 100%;
+    background-color: #2e6fef;
+    text-align: center;
+    letter-spacing: 2px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    line-height: 2; }
+
+.people {
+  margin-top: 300px;
+  position: relative;
+  z-index: 0; }
+  .people::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 320px);
+    background-color: #edf4f4; }
+  .people__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    width: calc(100% + 43px); }
+    .people__list__child {
+      max-width: calc((100% - 129px) / 3);
+      width: 100%;
+      margin-right: 43px;
+      margin-bottom: 20px; }
+      .people__list__child:nth-of-type(3n+2) {
+        transform: translateY(-60px); }
+      .people__list__child:nth-of-type(3n+3) {
+        transform: translateY(-100px); }
+      .people__list__child figure {
+        position: relative;
+        z-index: 0; }
+        .people__list__child figure figcaption {
+          position: absolute;
+          z-index: 1;
+          top: 20px;
+          left: 20px;
+          background-color: #0f55a1;
+          width: max-content;
+          display: table;
+          color: #fff;
+          line-height: 2;
+          border-radius: 25px;
+          padding: 0 15px; }
+      .people__list__child .introduce {
+        background-color: #fff;
+        transform: translate(-30px, -40px);
+        min-height: 130px;
+        padding: 0 40px 0 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .people__list__child .introduce p {
+          max-width: 50%;
+          width: 100%;
+          font-size: 1.8rem;
+          text-align: center; }
+        .people__list__child .introduce h3 {
+          max-width: 50%;
+          text-align: right;
+          font-weight: 500;
+          font-size: 2.2rem;
+          color: #333; }
+          .people__list__child .introduce h3 span {
+            display: block;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 500;
+            font-size: 1.3rem; }
+            .people__list__child .introduce h3 span.mini-txt {
+              font-size: 1.4rem;
+              opacity: 0.5;
+              margin-top: 10px; }
+        .people__list__child .introduce--green {
+          box-shadow: 0 0 20px rgba(15, 142, 161, 0.2); }
+          .people__list__child .introduce--green h3 span.color {
+            color: #0f8ea1;
+            margin-bottom: 5px; }
+        .people__list__child .introduce--blue {
+          box-shadow: 0 0 20px rgba(15, 85, 161, 0.2); }
+          .people__list__child .introduce--blue h3 span.color {
+            color: #0f55a1;
+            margin-bottom: 5px; }
+
+@media screen and (max-width: 1023px) {
+  .reset {
+    max-width: 100%; } }
+@media screen and (max-width: 767px) {
+  .reset__value__list {
+    flex-flow: row wrap;
+    justify-content: flex-start; }
+    .reset__value__list p {
+      max-width: calc((100% - 16px) / 2);
+      margin-right: 8px;
+      margin-bottom: 10px; }
+
+  .people {
+    margin-top: 100px; }
+    .people__list {
+      flex-flow: column wrap;
+      width: 100%; }
+      .people__list__child {
+        max-width: 100%;
+        transform: translateY(0) !important;
+        margin-right: 0; } }
+
+/*# sourceMappingURL=people.css.map */
