@@ -29,7 +29,7 @@ sans-serif;
         min-height: 30rem;
         transform: translateY(-106px);
         margin: 0 auto;
-        padding-top: 5.3rem;
+        padding-top: 53px;
         &.bg-white {
             background-color: #fff;
         }
@@ -63,6 +63,22 @@ sans-serif;
                     font-size: 40px;
                 }
             }
+            &.small {
+                font-size: 16px;
+                span {
+                    font-size: 16px;
+                }
+            }
+            &.align-left {
+                text-align: left;
+            }
+        }
+        .cm__lead {
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+            line-height: 1.4;
+            letter-spacing: 4px;
         }
     }
     .cm__box {

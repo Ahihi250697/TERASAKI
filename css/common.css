@@ -186,7 +186,7 @@ figure img {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 6rem;
+  padding-right: 60px;
 }
 .breadcrumb li {
   display: inline-flex;
@@ -316,3 +316,5 @@ figure img {
     opacity: 1;
   }
 }
+
+/*# sourceMappingURL=common.css.map */
