@@ -10,3 +10,4 @@ css/sourcemap
 css/talk.css.map
 css/contributions.css.map
 tailwind.config.js
+*.css.map
