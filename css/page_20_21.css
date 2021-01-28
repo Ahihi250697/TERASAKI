@@ -20,7 +20,7 @@
     height: 0;
     border-top: 1px solid #eeeeee;
     display: block;
-    margin-top: 73px;
+    margin-top: 53px;
 }
 
 .cm .cm__box {
@@ -108,8 +108,10 @@
 }
 
 .dummy-box {
-    width: 1360px;
-    max-width: 85vw;
+    /* width: 1360px; */
+    width: 84vw;
+    /* min-width: 1360px; */
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -130,6 +132,7 @@
 .dummy-box.reserve .dummy__content {
     padding: 0;
     padding-right: 8%;
+    padding-top: 10.85%;
 }
 
 .dummy-box .dummy__img,
@@ -167,8 +170,8 @@
     font-weight: 700;
     color: #2e6fef;
     line-height: 1.5;
-    margin-top: -5px;
-    margin-bottom: 63px;
+    margin-top: 3px;
+    margin-bottom: 40px;
 }
 
 .dummy-box .dummy__desc {
@@ -220,6 +223,8 @@
     width: 79px;
 }
 
+
+/* 
 .dummy-area .dummy-box.area--01::before {
     content: url("../images/page_22/img_decor_2s.png");
     position: absolute;
@@ -227,7 +232,7 @@
     bottom: 32px;
     display: block;
     width: 53px;
-}
+} */
 
 .dummy-area .dummy-box.area--01 .dummy__img figure::after {
     top: 9.5vw;
@@ -235,7 +240,16 @@
 }
 
 .dummy-area .dummy-box.area--02 {
-    margin-top: 149px;
+    margin-top: 195px;
+}
+
+.dummy-area .dummy-box.area--02::before {
+    content: url("../images/page_22/img_decor_2s.png");
+    position: absolute;
+    left: 11.5%;
+    top: 0;
+    display: block;
+    width: 53px;
 }
 
 .dummy-area .dummy-box.area--02 .dummy__img figure::after {
@@ -244,7 +258,7 @@
 }
 
 .dummy-area .dummy-box.area--03 {
-    margin-top: 211px;
+    margin-top: 283px;
 }
 
 .dummy-area .dummy-box.area--03::after {
@@ -260,7 +274,7 @@
     content: url("../images/page_22/img_decor_4s.png");
     position: absolute;
     left: 0;
-    bottom: -8px;
+    bottom: -32.5%;
     display: block;
     width: 53px;
 }
@@ -297,6 +311,8 @@
     }
     .dummy-area .dummy-box.area--01::after,
     .dummy-area .dummy-box.area--01::before,
+    .dummy-area .dummy-box.area--02::after,
+    .dummy-area .dummy-box.area--02::before,
     .dummy-area .dummy-box.area--03::after,
     .dummy-area .dummy-box.area--03::before {
         display: none;
@@ -396,7 +412,7 @@
 }
 
 .off-time-area .off-time-box {
-    margin-top: 80px;
+    margin-top: 226px;
     padding: 60px 0;
     transform: translateX(-16px);
 }
@@ -413,6 +429,9 @@
 }
 
 @media screen and (max-width: 1360px) {
+    .off-time-area .off-time-box {
+        margin-top: 50px;
+    }
     .off-time-area .off-time__desc .f-img {
         right: 20px;
     }
@@ -479,7 +498,7 @@
     font-size: 22px;
     font-weight: 500;
     color: #333;
-    margin-top: 20px;
+    margin-top: 13px;
 }
 
 .other-link .other-people .other__name span {
@@ -494,7 +513,7 @@
 .other-link .other-people .other__join {
     font-size: 14px;
     font-weight: 500;
-    color: rgba(51, 51, 51, 0.5);
+    color: #333;
     margin-top: 6px;
 }
 
@@ -516,7 +535,7 @@
     text-align: center;
     display: block;
     letter-spacing: 0.5px;
-    margin-top: 35px;
+    margin-top: 48px;
     background-color: #2e6fef;
     transition: all 0.3s ease;
 }
@@ -540,7 +559,7 @@
 }
 
 .other-area .other-content {
-    margin-top: 121px;
+    margin-top: 131px;
     width: 100%;
 }
 
@@ -566,5 +585,5 @@
 }
 
 .footer__container {
-    margin-top: 102px;
+    margin-top: 121px;
 }

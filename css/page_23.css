@@ -66,56 +66,54 @@
   }
 }
 
-.tab .title-area {
+.title-area {
   width: 100%;
   display: flex;
-  margin-top: 128px;
 }
-.tab .title-area .title__img,
-.tab .title-area .title__content {
+.title-area .title__img,
+.title-area .title__wrap {
   width: 100%;
 }
-.tab .title-area .title__img {
+.title-area .title__img {
   max-width: calc(50% + 28px);
   position: relative;
   padding: 95px 0;
 }
-.tab .title-area .title__img .title__img-order {
+.title-area .title__img .title__img-order {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-size: 250px;
-  color: #0f55a1;
   position: absolute;
   top: -98px;
   left: 187px;
   letter-spacing: 21px;
   transform: scaleX(0.78);
 }
-.tab .title-area .title__content {
+.title-area .title__wrap {
   max-width: calc(50% - 28px);
   color: #fff;
   font-weight: 700;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   position: relative;
   padding: 0 77px;
   padding-top: 204px;
 }
-.tab .title-area .title__content::after {
+.title-area .title__wrap::after {
   content: "";
   width: calc(100% + 137px);
   height: calc(100%);
-  background-color: #0f55a1;
   position: absolute;
   top: 0;
   right: 0;
   z-index: -1;
 }
-.tab .title-area .title__content .sub-title {
+.title-area .title__wrap .sub-title {
   font-size: 20px;
   display: block;
 }
-.tab .title-area .title__content .sub-title::after {
+.title-area .title__wrap .sub-title::after {
   content: "";
   width: 200px;
   height: 0;
@@ -123,11 +121,67 @@
   border-top: 2px solid #fff;
   margin-top: 24px;
 }
-.tab .title-area .title__content .title {
+.title-area .title__wrap .title {
   display: block;
   font-size: 35px;
   line-height: 1.59;
   margin-top: 20px;
+}
+
+.user-comment {
+  display: flex;
+}
+.user-comment .avatar {
+  width: 60px;
+  height: 60px;
+}
+.user-comment .comment {
+  width: calc(100% - 60px);
+  padding-left: 10px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.flex-box {
+  width: 100%;
+  display: flex;
+}
+
+.tab-area {
+  position: relative;
+  overflow: hidden;
+}
+.tab-area::after {
+  content: "";
+  width: 100%;
+  height: calc(100% - 200px);
+  position: absolute;
+  z-index: -10;
+  top: 30%;
+  left: 0;
+  background-color: #e7eef5;
+}
+.tab-area .title-area {
+  margin-top: 128px;
+}
+.tab-area .title-area .title__img .title__img-order {
+  color: #0f8ea1;
+}
+.tab-area .title-area .title__wrap::after {
+  background-color: #0f8ea1;
+}
+.tab-area .title-area .title__content {
+  padding-top: 204px;
+}
+.tab-area .tab-area.wrap-02 .tab__container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.tab-area .tab-area.wrap-02 .flex-box .flex-box__item {
+  width: 100%;
+  max-width: calc(100% / 2);
 }
 
 /*# sourceMappingURL=page_23.css.map */
