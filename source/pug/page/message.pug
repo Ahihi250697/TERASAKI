@@ -1,8 +1,74 @@
 include ../components/__mixin.pug
+include ../mixin/__message.pug
 - var path = '../'
+- var mc = 'message'
+- var cm_p= 'tracking-widest leading-loose'
+- var cm_wrap = 'w-full'
 doctype html
 html
-    head 
-        include ../components/__meta.pug
-        +head( path ,'MESSAGE', ['assets/css/reset.css', 'assets/css/bootstrap_custom.css', 'css/common.css', 'css/message.css'], true )
-    body 
+	head 
+		include ../components/__meta.pug
+		+head('MESSAGE', ['assets/css/reset.css', 'assets/css/bootstrap_custom.css', 'css/common.css', 'css/tailwind.css'], true )
+	body 
+		main(class= mc).font-medium
+			.library-cm
+				- mc= 'blockOne'
+				section(class= mc + ' mb:pb-4ty').flex.justify-end.pb-8lv.relative.z-0
+					div(class= mc + '-wrap' + ' ' + cm_wrap).max-w-calc2_6h2
+						div(class= mc + '-inner').max-w-128lv.w-full.px-lv2
+							.block-first.flex.justify-between.items-start.-mx-1ty5(class="relative tl:pt-2h tl:mb-8ty5 mb:flex-col-reverse mb:pt-0 mb:mb-0 mb:mx-auto")
+								.block-contents.max-w-680.flex-shrink-5.mx-1ty5(class="tl:flex-shrink-3 mb:mx-auto")
+									+title(`電気エネルギー制御技術で<br>船舶、産業、医療部門の発展に貢献し、<br>現在は5事業をグローバルに展開。`, 'text-3ty1 text-vw3_1 tl:absolute tl:top-0 tl:left-2ty tl:text-3ty1 mb:inset-auto mb:relative')
+									p.mt-lv6.pl-lv3_5.tracking-widest.leading-loose(class= "tl:mt-0 tl:pl-0 mb:mt-2ty") 当社は1923年（大正12）の創業以来、電気エネルギーの配電制御技術を基にした配電制御システム、ブレーカ、電子デバイスなどの製造・販売に取り組んでいます。1940年代後半には、世界で初めて限流ブレーカ（配線用遮断器）の独自技術開発を手がけ、昭和、平成、令和と時代に合わせた快適な暮らしの発展に貢献してきました。また、1970年代には海外拠点を設立し、いち早くグローバルビジネスを展開することで業界を牽引。ブレーカ及び船舶用・産業用配電制御システム業界におけるトップメーカーとしてのポジションを築いています。
+								figure.block-img.max-w-512.relative.mx-1ty5(class="mb:mx-auto mb:mb-2ty")
+									img(src= path + 'images/message/img_photo2.jpg' alt!=`電気エネルギー制御技術で船舶、産業、医療部門の発展に貢献し、現在は5事業をグローバルに展開。`)
+									p.text-lv2_4.leading-snug.absolute.right-0.-bottom-lv2.transform.translate-y-full(class="mb:text-1ty8 mb:transform-none mb:relative mb:inset-auto mb:mt-1ty5")
+										span.block.text-right 代表取締役 社長執行役員
+										b.block.text-right 寺崎 泰造
+							p(class= cm_p + ' tl:pl-0 mb:mt-2ty').mt-lv6.max-w-900.pl-3ty5!= `現在、次の5つの事業を手がけています。まずメインとなるのが、「船舶事業」「機器（ブレーカ）事業」「産業事業」です。そしてこれらの事業で培った技術力を活かして「メディカルデバイス事業」に参入。さらに、各種システム・装置の設置から、納入後の保守・メンテナンスを手がける「エンジニアリング＆ライフサイクル事業」も展開。事業ごとに、時代のニーズに応じた明確なビジョンを設定し、国内外のマーケットに向けた一流の製品を提供しています。`
+					span.block.absolute.-z-1.right-0.bottom-0.bg-green-custom1.h-6h.max-w-calc2_100.w-full
+					span.block.absolute.top-4ty.right-0.-z-1(class="mb:hidden")
+						img(src= path + 'images/message/img_pattern2.png' alt="pattern")
+					.absolute.left-0.top-full.-z-1.w-full(class="mb:hidden")
+						span.block.max-w-1th2h.w-full.m-auto.text-left
+							img(src= path + 'images/message/img_pattern1.png' alt="pattern").inline
+				- mc= 'blockTwo'
+				section(class= mc + ' mb:mt-6ty').flex.mt-lv13
+					div(class= mc + '-wrap' + ' ' + cm_wrap).flex.justify-end.max-w-calc2_6h
+						div(class= mc + '-inner').max-w-122lv.w-full.px-lv2
+							+title(`電気エネルギー制御技術で<br>船舶、産業、医療部門の発展に貢献し、<br>現在は5事業をグローバルに展開。`, 'text-3ty1')
+							.block-first.flex.justify-between.mt-lv7.-mx-1ty5(class="mb:mx-auto mb:block mb:mt-4ty")
+								figure.w-full.max-w-565.mx-1ty5(class="mb:mx-auto")
+									img(src= path + 'images/message/img_photo3.jpg' alt="現代生活に欠かせない電気に関わる事業。まだまだ発展の余地があるからこそ、挑戦へのモチーベーションが生まれる。")
+								p(class= cm_p + ' mb:mx-auto mb:max-w-full').max-w-530.pt-lv2_5.mx-1ty5.flex-shrink-1lv5!= `皆さんにとっては、生まれた時から当たり前のように使われている電気。歴史を辿ると、エジソンが世界で初めて白熱電球を発明したのが1879年です。約130年前、つまり人類の長いヒストリーの中では、つい最近の出来事。例えば、当社の主要なマーケットである海運業や造船業などと比較しても歴史が浅く、また世界人口の約1/5が今も電気を使用していない現状からも、実はまだまだ発展の余地があるフィールドと言えるでしょう<br>ますます重要視される環境に関する分野や、世界中の新しいマーケットにも挑戦しながら事業の発展を目指します。`
+							p(class= cm_p + ' tl:pl-0 mb:mt-3ty mb:pb-4ty').mt-lv7_5.max-w-835.pl-lv3_5.pr-4.pb-lv5.relative!= `当社はどの系列にも属さない独立系の専業メーカーであることからも、様々な企業様とお付き合いすることができます。また、先程申し上げた5つの事業を展開することで経営リスクの分散が実現すると同時に、長いキャリアの中で、複数の分野のビジネスに携わり経験を積むチャンスがあるとも言えるでしょう。`
+								span.block.absolute.-z-1.-right-lv2.bottom-0.w-screen.bg-green-custom1.h-6h
+				- mc= 'blockLast'
+				section(class= mc + ' mb:mt-7ty').mt-lv16.relative.z-0
+					div(class= mc + '-img').relative
+						span.block.aspect-w-16.aspect-h-5.bg-mesBg.bg-no-repeat.bg-cover(class="mb:pb-2h mb:bg-right")
+						div(class= mc + '-img-above -translate-x-1/2 left-2/4 tl:inset-auto tl:relative tl:transform-none tl:max-w-full').max-w-132lv.w-full.absolute.z-1.bottom-0.transform.h-calc-2ty.max-h-4h10
+							div(class= mc + '-img-inner w-3/5 tl:w-full tl:max-w-full tl:pl-2ty tl:bg-transparent').max-w-755.bg-white.pl-3ty.pr-2ty.h-full.flex.items-center.justify-center.py-2ty
+								.max-w-6h50.w-full.mx-auto.max-h-3h10.h-full.flex.flex-col.justify-between(class="tl:w-full tl:max-w-full")
+									+title(`「チーム・テラサキ」の使命に共感し、<br>自身の手で勝ち取ったポジションで、<br>安全・安心・快適な社会に貢献してほしい。`, 'text-3ty text-vw3 tl:text-3ty')
+									p(class= cm_p + ' tl:pl-0').pl-lv3_5.mt-2ty!= `「チーム・テラサキ」として、当社の事業を支える従業員は現在約2,000人。規模としては中堅企業でありながらも、20か国以上もの様々な国籍を持つ人々が在籍するグローバルな企業です。`
+					div(class= mc + '-content').container
+						.max-w-9h15.mt-lv5(class="mb:mt-0")
+							p(class= cm_p)!= `ダイバーシティ（多様性）を認め、お互いを理解・尊重し合いながら働くことに喜びを感じられる人にとっては、得るものが非常に大きい職場となるでしょう。世界11カ国・15拠点を展開しており、海外で活躍できるチャンスも待っています。`
+							br(class="mb:hidden")
+							br(class="mb:hidden")
+							br
+							p(class= cm_p)!= `最後に、我々が掲げる使命は2つ。1つ目は、「開発、製造、販売する世界で一流の製品とサービスを通じてお客様に『安全』、『安心』、『快適』をお届けし、人類社会に貢献する」こと。2つ目は、その役割を「配電制御技術を究める」ことで果たすこと。当社としては、これからも変わらずこの2つを忠実に実行し続けてまいりますので、大前提としてこの使命に共感し、「モノづくりを通して社会に貢献したい」と願う意欲あふれる人材を歓迎します。`
+							br(class="mb:hidden")
+							br(class="mb:hidden")
+							br
+							p(class= cm_p)!= `もちろん、入社後すぐは、わからないことやできないことも多いでしょう。だからこそ支えてくれる先輩や上司たち、風通しが良く発言しやすいアットホームな職場環境、そして多様な可能性を引き出すジョブローテーションなどを整えて、お待ちしています。皆さんの得意を活かしながら、ステップアップを通して自身の手で勝ち取ったポジションで、活躍してほしいと思います。`
+					span.block.absolute.bottom-6ty.right-0.bg-green-custom1.-z-1.max-w-calc2_70.h-calc-6ty.w-full
+					.absolute.left-0.-z-1.w-full.-top-1h20(class="mb:hidden")
+						span.block.max-w-1th1h5.w-full.m-auto.text-right
+							img(src= path + 'images/message/img_pattern1.png' alt="pattern").inline
+					span.block.absolute.bottom-4ty.left-0.-z-1(class="mb:hidden")
+						img(src= path + 'images/message/img_pattern2.png' alt="pattern")
+
+
+

@@ -1,12 +1,15 @@
-div(class= mc + '-wrap').flex
-  a(href="#").block.max-w-half.w-full
+div(class= mc + '-wrap mb:block mb:max-w-6h50 mb:mx-auto').flex
+  a(href="#", class="mb:max-w-full").block.max-w-half.w-full
     figure(class= mc + '-img').relative.z-0
       img(src= path + 'images/top/img_business.jpg', alt= altImg)
-      div(class= mc + '-tInner top-2/4 left-2/4').absolute.z-1.text-white
+      div(class= mc + '-tInner top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2').absolute.z-1.text-white.transform
         span.block.text-center.leading-none.font-en.mb-6 WORK
         span.block.text-center.leading-normal 事業紹介
-  ul(class= mc +'-lists').max-w-half.w-full.pl-16.flex.flex-col
+  ul(class= mc +'-lists mb:max-w-full mb:pl-0 mb:mt-2ty').max-w-half.w-full.pl-16.flex.flex-col
     - var lists= ['船舶用システム製品', '産業用システム製品', '機器（ブレーカ）製品', 'メディtカルデバイス']
     each list in lists 
       li(class= mc + '-list').w-full.h-full.border-b.border-colour-1.border-solid.px-lv1_6.flex.items-center
-        a(href="#").table!= list
+        a(href="#", class="mb:py-1ty").text-black.flex.items-center!= list
+          <svg class="stroke-current text-blue-custom1 h-1ty5 ml-1ty" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>

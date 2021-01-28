@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@neojp/tailwindcss-important-variant": "^1.0.1",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
     "autoprefixer": "^10.2.3",
     "browser-sync": "^2.26.13",
     "cssnano": "^4.1.10",
@@ -38,6 +40,8 @@
     "onCommand:extension.useMyExtension"
   ],
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.2.0",
+    "@tailwindcss/typography": "^0.4.0",
     "tailwindcss": "^2.0.2"
   }
 }

@@ -1,0 +1,43 @@
+include ../components/__mixin.pug
+include ../mixin/__data.pug
+- var path = '../'
+- var mc = 'data'
+- var cm_p= 'tracking-wider leading-1lv9'
+- var cm_grid= 'grid-cols-2 grid mb:grid-cols-1 mb:grid-rows-2'
+- var grid_child= 'grid-cols-2 grid-rows-2 grid'
+doctype html
+html
+	head 
+		include ../components/__meta.pug
+		+head('DATA', ['assets/css/reset.css', 'assets/css/bootstrap_custom.css', 'css/common.css', 'css/tailwind.css'], true )
+	body 
+		main(class= mc).font-medium
+			.container
+				- mc= 'blockOne'
+				div(class= mc)
+					+title('働いている人について')
+					- var name_c= 'child-lists'
+					- var tw_child= ' h-2h75 flex justify-center items-center p-2ty relative'
+					ul.parent-list.font-bold(class= cm_grid).mt-5ty
+						include ../layout/data/__block1.pug
+					ul.parent-list.font-bold(class= cm_grid)
+						include ../layout/data/__block2.pug
+					ul.parent-list.font-bold(class= cm_grid)
+						include ../layout/data/__block3.pug
+					ul.parent-list.font-bold.grid.grid-cols-121fr(class="")
+						include ../layout/data/__block4.pug
+					ul.parent-list.font-bold.grid.grid-cols-31fr
+						include ../layout/data/__block5.pug
+					ul.parent-list.font-bold.grid.grid-cols-4
+						include ../layout/data/__block6.pug
+				- mc= 'blockTwo'
+				div(class= mc).mt-6ty
+					+title('会社実績')
+					ul.parent-list.font-bold.grid.grid-cols-4.grid-rows-2.mt-4ty(class="mb:grid-cols-2 mb:grid-rows-4")
+						include ../layout/data/__block7.pug
+					.container
+					- mc= 'blockTwo'
+						div(class= mc + '-img').pb-7ty.border-b-2.border-solid.border-grey-option6
+							p.text-2ty.font-bold.text-grey-option7.text-center.leading-tight.my-4ty5 売上高推移
+							figure.w-full.flex.items-center.justify-center
+								img(src= path + 'images/data/img_diagram.png', alt="Map").max-w-full.w-auto

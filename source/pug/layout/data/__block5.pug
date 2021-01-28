@@ -1,0 +1,36 @@
+li.parent-lists.relative.h-2h75.flex.items-center
+	mixin block14(text, c_name)
+		li.list-odomete.my-1ty.flex.flex-col.justify-center.items-center(class="mr-1ty5 last:mr-0")
+			span.table.text-white.text-center.py-3p.px-5p.whitespace-nowrap.mb-2p(class= 'bg-' + c_name)!= text
+			.odomete-warp.leading-none(class= 'text-' + c_name).flex.items-end.justify-start
+				.js-odomete.text-4ty5.tracking-widest.font-medium.font-en 00
+				span.text-2ty5.mb-2p 名
+	+blockimg('world', ['海外拠点', '従業員数'], false, false, ' max-w-4h50', true)
+		div 
+			ul.list1.flex.justify-start
+				li.list-odomete.my-1ty(class="mr-1ty5 last:mr-0")
+					+odomete(['00', '名'], 'text-blue-option1 items-end' ,'text-4ty5 font-en font-medium', 'text-2ty5 mb-2p', 'イギリス', 'flex flex-col items-center items-center', 'table text-white py-3p px-5p mb-2p bg-blue-option1')
+				li.list-odomete.my-1ty(class="mr-1ty5 last:mr-0")
+					+odomete(['00', '名'], 'text-blue-option2 items-end' ,'text-4ty5 font-en font-medium', 'text-2ty5 mb-2p', 'シンガポール', 'flex flex-col items-center items-center', 'table text-white py-3p px-5p mb-2p bg-blue-option2')
+				li.list-odomete.my-1ty(class="mr-1ty5 last:mr-0")
+					+odomete(['00', '名'], 'text-pink-option1 items-end' ,'text-4ty5 font-en font-medium', 'text-2ty5 mb-2p', 'ブラジル', 'flex flex-col items-center items-center', 'table text-white py-3p px-5p mb-2p bg-pink-option1')
+				li.list-odomete.my-1ty(class="mr-1ty5 last:mr-0")
+					+odomete(['00', '名'], 'text-grey-option4 items-end' ,'text-4ty5 font-en font-medium', 'text-2ty5 mb-2p', 'イタリア', 'flex flex-col items-center items-center', 'table text-white py-3p px-5p mb-2p bg-grey-option4')
+			ul.list2.flex.justify-start
+				li.list-odomete.my-1ty(class="mr-1ty5 last:mr-0")
+					+odomete(['00', '名'], 'text-green-option2 items-end' ,'text-4ty5 font-en font-medium', 'text-2ty5 mb-2p', 'マレーシア', 'flex flex-col items-center items-center', 'table text-white py-3p px-5p mb-2p bg-green-option2')
+				li.list-odomete.my-1ty(class="mr-1ty5 last:mr-0")
+					+odomete(['00', '名'], 'text-blue-option4 items-end' ,'text-4ty5 font-en font-medium', 'text-2ty5 mb-2p', 'バルセロナ', 'flex flex-col items-center items-center', 'table text-white py-3p px-5p mb-2p bg-blue-option4')
+				li.list-odomete.my-1ty(class="mr-1ty5 last:mr-0")
+					+odomete(['00', '名'], 'text-green-option1 items-end' ,'text-4ty5 font-en font-medium', 'text-2ty5 mb-2p', '中国（広州）', 'flex flex-col items-center items-center', 'table text-white py-3p px-5p mb-2p bg-green-option1')
+				li.list-odomete.my-1ty(class="mr-1ty5 last:mr-0")
+					+odomete(['00', '名'], 'text-pink-option1 items-end' ,'text-4ty5 font-en font-medium', 'text-2ty5 mb-2p', '中国（上海）', 'flex flex-col items-center items-center', 'table text-white py-3p px-5p mb-2p bg-pink-option1')
+				li.list-odomete.my-1ty(class="mr-1ty5 last:mr-0")
+					+odomete(['00', '名'], 'text-blue-custom1 items-end' ,'text-4ty5 font-en font-medium', 'text-2ty5 mb-2p', 'スウェーデン', 'flex flex-col items-center items-center', 'table text-white py-3p px-5p mb-2p bg-blue-custom1')
+	+lineWidthFull('-bottom-px left-0')
+li.parent-lists.relative.h-2h75.flex.items-center.justify-center
+	+blockimg('suitcase', ['入社0年後の', '新卒定着率'])
+		+odomete(['00', '%'], 'items-end justify-center text-grey-option4 font-en font-medium mt-7p' ,'text-6ty7', 'text-2ty5 mb-2p')
+		+textsub('2014年～2018年', 'mt-1ty5')
+	+lineHeight('-left-px')
+	+lineWidthFull('-bottom-px right-0')

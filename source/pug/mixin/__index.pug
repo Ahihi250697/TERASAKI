@@ -1,5 +1,8 @@
 mixin titleh2(textEn, textJp)
   - altImg= textJp
-  h2(class= h2).mb-24
-    span.text-lv2.block.text-center.leading-normal!= textJp
-    span.text-lv4.text-blue-custom1.block.text-center.font-en.leading-none.mt-2!= textEn
+  h2(class= h2 + ' mb:mb-3ty').mb-24.font-medium
+    span(class="mb:text-default mb:leading-none").text-lv2.block.text-center.leading-normal!= textJp
+    span(class="mb:text-2ty4 mb:mt-7p").text-lv4.text-blue-custom1.block.text-center.font-en.leading-none.mt-2!= textEn
+
+mixin button(addClass, content)
+  button.bg-transparent.border.w-full.h-lv6_5(class= addClass + ' mb:h-5ty')!= content

@@ -1,0 +1,117 @@
+mixin title(title)
+	h3.font-bold.text-white.text-2ty.h-7ty.flex.justify-center.items-center.bg-blue-option4!= title
+
+
+
+mixin odomete(content, class1, class2, class3, title, class4, class5)
+	- var f_class= ''
+	- var s_class= ''
+	- var t_class= ''
+	- var fo_class= ''
+	- var fi_class= ''
+	if class1 
+		- f_class= class1
+	if class2 
+		- s_class= class2 
+	if class3 
+		- t_class= class3
+	if class4 
+		- fo_class= class4
+	if class5 
+		- fi_class= class5
+	if title 
+		.block-odomete(class = fo_class)
+			span.block.leading-none(class= fi_class)!= title
+			if content[1]
+				.odomete-warp.flex.leading-none(class= f_class)
+					.js-odomete.tracking-widest(class= s_class)= content[0]
+					span.last-text.block(class= t_class)= content[1]
+			else 
+				.js-odomete.tracking-widest(class= f_class)= content[0]
+	else 
+		if content[1]
+			.odomete-warp.flex.leading-none(class= f_class)
+				.js-odomete.tracking-widest(class= s_class)= content[0]
+				span.last-text.block(class= t_class)!= content[1]
+		else 
+			.js-odomete.tracking-widest(class= f_class)= content[0]
+
+mixin odomete2(content, class1, class2, class3)
+	- var f_class= ''
+	- var s_class= ''
+	- var t_class= ''
+	if class1 
+		- f_class= class1
+	if class2 
+		- s_class= class2 
+	if class3 
+		- t_class= class3
+	.block-odomete.flex.items-end.tracking-widest(class = f_class)
+		.odomete-warp.leading-none(class= s_class)= content[0]
+		span.block.leading-none(class= t_class)!= content[1]
+		.odomete-warp.leading-none(class= s_class)= content[2]
+		if content[3]
+			span.block.leading-none(class= t_class)!= content[3]
+			.odomete-warp.leading-none(class= s_class)= content[4]
+			span.block.leading-none(class= t_class)!= content[5]
+	if block 
+		block
+
+mixin textsub(content, n_class)
+	- var a_class= ''
+	if n_class 
+		- a_class= n_class
+	p.text-center.text-1ty3.font-medium.leading-none(class= a_class)= content
+
+mixin blockimg(img, title, addClass, classp, classf, v_block)
+	- var c_name= ''
+	- var textalt= ''
+	- var content= ''
+	- var p_class= ''
+	- var f_class= ''
+	if addClass
+		- c_name= addClass
+	if classp 
+		- p_class= classp
+	if classf
+		- f_class= classf
+	each text,index in title
+		- textalt+= text
+		if index == (title.length - 1)
+			- content+= text
+		else
+			- content+= text + '<br>'
+	div(class= name_c + '-inner').h-full.w-full.relative.z-0.flex.justify-center.items-center
+		if img
+			figure(class= name_c + '-img' + f_class).absolute.p-2ty.-z-1.top-0.left-0.w-full.h-full.flex.justify-center.items-center
+				img(src= path + 'images/data/img_' + img + '.png', alt= textalt).max-w-full.w-auto
+		if !(v_block)
+			div(class= name_c + '-content' + c_name)
+				p.text-2ty.font-bold.text-grey-option7.text-center.leading-tight(class= p_class)!= content 
+				if block
+					block
+		else 
+			div(class= name_c + '-content mr-6ty pl-4ty' + c_name)
+				p.text-2ty.font-bold.text-grey-option7.text-center.leading-tight(class= p_class)!= content 
+				p.text-center.text-1ty3.font-medium.leading-none.mt-3ty 2018年度
+			if block
+				block
+mixin pie(title, pie)
+	.pie-inner.w-full
+		.flex.justify-between.w-full.max-w-4h60.mx-auto
+			p.text-2ty.font-bold.text-grey-option7.text-center.leading-tight= title
+			figure
+				img(src= path + 'images/data/img_' + pie + '.png', alt= title)
+		if block 
+			block
+mixin lineHeight(c_name)
+	span.block.bg-grey-option6.absolute.w-2p.h-calc-3ty(class= 'transform -translate-y-1/2 top-2/4 ' + c_name)
+
+mixin lineWidthFull(c_name)
+	span.block.bg-grey-option6.absolute.h-2p.w-calc-1ty5(class= c_name)
+
+mixin lineWidth(c_name)
+	span.block.bg-grey-option6.absolute.h-2p.w-calc-3ty(class= 'transform -translate-x-1/2 left-2/4 ' + c_name)
+
+mixin lineW(c_name)
+	span.hidden.bg-grey-option6.absolute.h-2p.w-full.left-0(class= 'mb:block ' + c_name)

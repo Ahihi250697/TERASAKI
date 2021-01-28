@@ -1,0 +1,9 @@
+div(class= mc + '-wrap mb:mt-0 mb:mx-auto mb:block mb:max-w-4h80').flex.mt-lv7_5
+	- var n = ['キャリアデザイン', 'インターンシップ', '福利厚生制度']
+	each title,index in n
+		figure(class= mc + '-img mb:mb-2p mb:last:mb-0').w-full.relative
+			img(src= path + 'images/top/img_invironment_photo' + (index + 1) + '.jpg' alt="働く環境を知る")
+			figcaption(class="mb:left-2ty mb:bottom-2ty").absolute.left-lv5.bottom-lv3_5.leading-none.text-white!= title
+				<svg class="h-lv1_2 ml-lv2_5 mb:ml-1ty5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+				</svg>

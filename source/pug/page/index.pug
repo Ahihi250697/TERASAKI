@@ -8,16 +8,62 @@ include ../mixin/__index.pug
 - var altImg= ''
 doctype html
 html
-    head 
-        include ../components/__meta.pug
-        +head('TOP', ['assets/css/reset.css', 'assets/css/bootstrap_custom.css', 'css/common.css', 'css/tailwind.css' ,'css/top.css'], true )
-    body 
-        main(class= mc)
-            .library-cm
-                - mc= 'business'
-                section(class= mc).pt-lv13.pb-lv11_5.bg-blue-custom2.font-medium
-                    .container
-                        +titleh2('OUR BUSINESS', '世界トップクラスの事業')
-                        include ../layout/top/__business.pug
-                                
-                            
+	head 
+		include ../components/__meta.pug
+		+head('TOP', ['assets/css/reset.css', 'assets/css/bootstrap_custom.css', 'css/common.css', 'css/tailwind.css'], true )
+	body 
+		main(class= mc)
+			.library-cm
+				- mc= 'mvBlock'
+				section(class= mc).max-h-screen.bg-mv.bg-cover.bg-no-repeat.relative.z-0
+					.aspect-w-16.aspect-h-10
+					figure.absolute(class="w-9/12 -translate-x-1/2 -translate-y-1/2 top-2/4 left-2/4").transform.z-1.flex.items-center.max-w-900
+						img(src= path + 'images/top/img_logo.png' alt="logo")
+				- mc= 'business'
+				section(class= mc + ' mb:py-5ty').pt-lv13.pb-lv11_5.bg-blue-custom2.font-medium
+					.container
+						+titleh2('OUR BUSINESS', '世界トップクラスの事業')
+						include ../layout/top/__business.pug
+				- mc= 'environment'
+				section(class= mc + ' mb:mt-7ty').mt-lv8_5
+					.container
+						+titleh2('ENVIRONMENT', '働く環境を知る')
+					include ../layout/top/__environment.pug
+				- mc= 'people'
+				section(class= mc + ' mb:flex-col-reverse mb:mt-7ty').mt-lv14_5.flex
+					figure(class= mc + '-img max-w-calc2_40 mb:max-w-full').w-full
+						img(src="images/top/img_people.jpg" alt="人を知る")
+					include ../layout/top/__people.pug
+				- mc= 'female'
+				section(class= mc + ' mb:mt-7ty').mt-lv11
+					.container
+						div(class= mc + '-wrap mb:h-2h50').h-lv30.flex.justify-end.relative.z-0
+							div(class= mc + '-img mb:bg-custom_right').h-full.bg-female.bg-no-repeat.bg-cover.w-full.max-w-730
+							div(class= mc + '-content').absolute.top-0.left-0.z-1.h-full.flex.flex-col.justify-between.items-start
+								span(class="mb:text-default").table.bg-blue-custom1.text-lv2.text-white.px-lv2.py-7p.leading-none 女性社員座談会
+								figure
+									img(src= path + 'images/top/img_text.png' alt="女性社員座談会")
+								+button('max-w-260 border-black', '詳細を見る')
+				- mc= 'company'
+				section(class= mc + ' mb:mt-7ty').mt-lv10.font-medium
+					+titleh2('COMPANY', '会社を知る')
+					div(class= mc + '-wrap mb:block mb:max-w-4h80 mb:mx-auto').flex.font-medium
+						- var contents = ['事業所紹介', '社長メッセージ', '数字でみるTERASAKI']
+						each content,index in contents
+							a.block-link.block.w-full.max-w-calc3(class="mb:max-w-full mb:mb-2p mb:last:mb-0")
+								figure.relative
+									img(src= path + 'images/top/img_company_photo' + (index + 1) +'.jpg', alt= content)
+									figcaption.text-white.whitespace-nowrap.text-lv2.absolute.z-1.transform(class="-translate-x-1/2 -translate-y-1/2 top-2/4 left-2/4 mb:text-default")= content
+					div(class="mb:px-2ty mb:max-w-4h80 mb:mx-auto")
+						+button('max-w-545 border-black m-auto block mt-lv6_5 mb:mt-4ty', '会社概要')
+				- mc= 'lastBlock'
+				section(class= mc + ' mb:py-4ty mb:mt-6ty').mt-lv11_5.py-lv6_5.bg-blue-custom2.font-medium
+					.container
+						div(class= mc + '-wrap mb:block').flex.justify-between
+							- var t = ['募集要項／選考プロセス', 'よくあるご質問']
+							each content, index in t
+								.max-w-calc2-1.w-full.text-center.bg-white.pt-lv5.pb-lv6_5(class="mb:max-w-full mb:py-3ty mb:mb-2p mb:last:mb-0")
+									img(src= path + 'images/top/img_icon'+ (index + 1) + '.png', alt= content).inline
+									span(class="mb:text-default").block.text-lv1_8.text-center.mt-lv2= content
+						
+

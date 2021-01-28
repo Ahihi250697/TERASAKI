@@ -1,0 +1,17 @@
+mixin list(content1, content2)
+    - count++
+    li(class= mc + '-lists last:m-0 mb:mb-5ty').border-t.border-grey-option3.border-solid.mb-8ty.relative
+        div(class= mc + '-inner tl:block tl:mx-auto mb:pt-4ty').pt-6ty.flex.justify-between.items-start.-mx-2ty
+            dl.max-w-calc2_2ty.w-full.mx-2ty(class="tl:max-w-full tl:mx-auto")
+                dt.flex.items-center
+                    span(class="mb:text-1ty8 mb:mr-1ty").num.font-en.text-2ty5.text-white.tracking-widest.bg-blue-custom1.rounded-full.mr-2ty.w-4ty5.leading-45.text-center.flex-shrink-0= ('0' + count)
+                    span(class="mb:text-2ty mb:mr-1ty").text-blue-custom1.text-3ty1.font-bold.mr-2ty!= content1[0]
+                    span(class="mb:text-default").text-grey-option1.text-2ty!= content1[1]
+                dd(class= cm_p + ' mb:mt-2ty').mt-3ty!= content1[2]
+            dl.max-w-4h80.w-full.px-4ty5.py-4ty.bg-green-custom1.rounded-3ty.relative.mt-7p.mx-2ty(class="tl:max-w-full tl:mx-auto tl:mt-5ty mb:px-2ty mb:py-3ty mb:mt-3ty")
+                dt(class="mb:text-1ty8").font-bold.text-2ty.text-blue-custom1.pb-1ty.ledding-normal.table.relative 就職活動のみなさんへ
+                    span.absolute.bottom-0.left-0.w-full.bg-blue-custom1.h-1p
+                dd(class= cm_p).mt-1ty!= content2
+                    span.tw-arrowBorder.absolute.top-1h25.-left-2ty2(class="tl:-top-2ty5 tl:left-1h25 tl:origin-bottom-left tl:transform tl:skew-y-45 tl:skew-x-12 tl:border-none tl:w-2ty5 tl:h-2ty5 tl:bg-blue-custom2 tl:-z-1")
+        if block
+            block

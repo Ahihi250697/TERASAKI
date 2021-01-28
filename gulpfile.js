@@ -69,9 +69,9 @@ gulp.task('img', function(){
             })
         ]))
         .pipe(gulp.dest('./images/'))
-        .pipe(browserSync.reload({
-            stream: true
-        }));
+        // .pipe(browserSync.reload({
+        //     stream: true
+        // }));
 });
 
 gulp.task('sass', function(){
@@ -159,6 +159,7 @@ gulp.task('ejs', function(){
 })
 
 gulp.task('watch', function() {
+    gulp.watch('./tailwind.config.js', gulp.series('tailwind'));
     gulp.watch('./source/sass/**/*.sass', gulp.series('sass'));
     gulp.watch('./source/css/*.css', gulp.series('css'));
     gulp.watch('./source/pug/**/*.pug', gulp.series('pug'));

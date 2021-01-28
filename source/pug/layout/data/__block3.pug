@@ -1,0 +1,31 @@
+li.parent-lists.relative.h-2h75.flex.items-center
+	+blockimg('foods', ['ランチは？'], ' flex w-full justify-start items-center', 'max-w-half w-full text-center')
+		ul.lists-odomete.max-w-2h.w-full.flex.justify-start.flex-wrap
+			- mc= 'list-odomete my-1ty w-1h flex justify-start'
+			li(class= mc)
+				+odomete(['00', '%'], 'text-orange-option1 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', '外食', 'flex flex-col items-center', 'table text-white text-center w-7ty5 py-3p mb-2p bg-orange-option1')
+			li(class= mc)
+				+odomete(['00', '%'], 'text-pink-option1 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', 'お弁当', 'flex flex-col items-center', 'table text-white text-center w-7ty5 py-3p mb-2p bg-pink-option1')
+			li(class= mc)
+				+odomete(['00', '%'], 'text-blue-option2 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', 'コンビニ', 'flex flex-col items-center', 'table text-white text-center w-7ty5 py-3p mb-2p bg-blue-option2')
+			li(class= mc)
+				+odomete(['00', '%'], 'text-blue-option1 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', 'その他', 'flex flex-col items-center', 'table text-white text-center w-7ty5 py-3p mb-2p bg-blue-option1')
+	+lineWidthFull('-top-px left-0')
+	+lineWidthFull('-bottom-px left-0')
+	+lineHeight('-right-px mb:hidden')
+li.parent-lists.relative.h-2h75.flex.items-center
+	mixin list1(count, content, addClass)
+		li.flex.justify-start.items-center
+			.h-6ty.w-6ty.flex.justify-center.items-center.mr-2ty(class="bg-" + addClass)
+				p.text-white.leading-none
+					span.font-en.font-medium.text-3ty3= count
+					span.text-2ty.font-bold 位
+			p(class="text-" + addClass).text-2ty6.font-bold= content
+	+blockimg(false, ['理工系出身学科ランキング'])
+		ul.list-inner.flex.flex-wrap.max-w-4h50.w-full.mx-auto.justify-between.mt-2ty5
+			+list1(1, '機械工学', 'blue-option1')
+			+list1(3, '機械工学', 'grey-option8')
+			+list1(2, '電子工学', 'grey-option9')
+			+list1(4, '電子工学', 'grey-option10')
+	+lineWidthFull('-top-px right-0')
+	+lineWidthFull('-bottom-px right-0')
