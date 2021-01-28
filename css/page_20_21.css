@@ -459,15 +459,16 @@
 }
 
 .other-link {
-    width: 100%;
+    width: calc(100% + 86px);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
 .other-link .other-people {
+    max-width: calc((100% - 344px) / 4);
     width: 100%;
-    max-width: calc(25% - 65px);
+    margin-right: 86px;
     display: block;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -536,12 +537,30 @@
     display: block;
     letter-spacing: 0.5px;
     margin-top: 48px;
-    background-color: #2e6fef;
+    background-color: #fff;
+    border: 1px solid #2e6fef;
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 0;
+}
+.other-more::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2e6fef;
+    transition: all 0.5s ease;
+    transform-origin: left center;
 }
 
-.other-more::hover {
-    opacity: 0.75;
+.other-more:hover {
+    color: #2e6fef;
+}
+.other-more:hover::before {
+    transform: scaleX(0);
 }
 
 .other-area {
