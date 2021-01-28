@@ -1,0 +1,25 @@
+/*.cm--welfare .cm__content{
+	min-height: 80
+}*/
+.welfare {
+  margin-bottom: 145px;
+  position: relative;
+  z-index: 0; }
+  .welfare__decord__right {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    transform: translateY(-80px); }
+  .welfare__decord__left {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 10%;
+    transform: translateY(-160px); }
+
+@media screen and (max-width: 1023px) {
+  .welfare__decord__right, .welfare__decord__left {
+    display: none; } }
+
+/*# sourceMappingURL=welfare.css.map */

@@ -20,6 +20,33 @@
         font-size: 2.2rem;
         line-height: 2;
         letter-spacing: 1px; }
+  .mv__detail {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    max-width: 1120px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    padding-top: 45px; }
+    .mv__detail::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 2px;
+      background-color: #fff; }
+    .mv__detail h2 {
+      font-weight: bold;
+      font-size: 3rem;
+      color: #fff;
+      line-height: 1.5; }
+      .mv__detail h2 span {
+        font-weight: 500;
+        font-size: 1.6rem;
+        display: block; }
 
 .under-mv .container {
   padding-top: 75px;

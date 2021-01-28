@@ -1,3 +1,8 @@
+.cm.cm--people .cm__content .cm__content__title-intro {
+  font-size: 2rem; }
+  .cm.cm--people .cm__content .cm__content__title-intro span {
+    font-size: 4rem; }
+
 .reset {
   max-width: calc(100% - 220px);
   width: 100%;
