@@ -9,10 +9,11 @@ li.parent-lists
 			div(class= name_c + '-inner')
 				+block1('平均年齢')
 					+odomete(['00', '歳'], 'items-end text-grey-option4' ,'text-5ty3 font-en font-medium', 'text-2ty9 mb-2p')
-				span(class= name_c + '-border').block.h-2p.bg-grey-option6.max-w-1h50.w-full.mx-auto.my-2ty5
+				span(class= name_c + '-border mb:my-1ty5').block.h-2p.bg-grey-option6.max-w-1h50.w-full.mx-auto.my-2ty5
 				+block1(`平均在籍<br>年数`)
 					+odomete(['00', '歳'], 'items-end text-grey-option4' ,'text-5ty3 font-en font-medium', 'text-2ty9 mb-2p')
-			+lineHeight('-right-px')
+			+lineHeight('-right-px mb:hidden')
+			+lineWidth('-bottom-px hidden mb:block')
 		li(class= name_c + tw_child)
 			+blockimg('house_top', ['勤続年数'])
 				+odomete(['19.22', '年'], 'items-end text-pink-option1 mt-1ty' ,'text-5ty3 font-en font-medium', 'text-2ty9 mb-1p')
@@ -20,31 +21,33 @@ li.parent-lists
 			+lineWidth('-bottom-px')
 		li(class= name_c + tw_child)
 			+blockimg('man', ['新卒・中途入社比率'])
-				.flex.items-end.justify-center.mt-3ty5
+				.flex.items-end.justify-center.mt-3ty5(class='mb:mt-0')
 					+odomete(['00'], 'text-green-option2 text-5ty8 font-en font-medium' ,false, false, '新卒', 'flex flex-col items-center', 'table text-white w-6ty5 text-center py-5p mb-7p bg-green-option2')
-					span.text-grey-option7.text-5ty3.leading-none.ml-2p.mr-7p :
+					span.text-grey-option7.text-5ty3.leading-none.ml-2p.mr-7p(class='mb:text-3ty') :
 					+odomete(['00'], 'text-blue-custom1 text-5ty8 font-en font-medium' ,false, false, '中途', 'flex flex-col items-center', 'table text-white w-6ty5 text-center py-5p mb-7p bg-blue-custom1')
-			+lineWidthFull('-top-px left-0')
+			+lineWidthFull('-top-px left-0 mb:hidden')
+			+lineWidth('-bottom-px hidden mb:block')
 		li(class= name_c + tw_child)
 			+blockimg('moutain', ['休日はどっち派？'])
-				.flex.justify-center.mt-3ty5.pb-5p
+				.flex.justify-center.mt-3ty5.pb-5p(class='mb:mt-0')
 					+odomete(['00', '%'], 'text-green-option1 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', 'アウトドア派', 'flex flex-col items-center last:mr-0 mr-1ty2', 'table text-white p-5p mb-1ty whitespace-nowrap bg-green-option1')
 					+odomete(['00', '%'], 'text-blue-option2 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', 'インドア派', 'flex flex-col items-center last:mr-0 mr-1ty2', 'table text-white p-5p mb-1ty whitespace-nowrap bg-blue-option2')
-			+lineHeight('-left-px')
-li.parent-lists.pie.flex.items-center.justify-center.relative
+			+lineHeight('-left-px mb:hidden')
+			+lineWidth('-bottom-px hidden mb:block')
+li.parent-lists.pie.flex.items-center.justify-center.relative(class='mb:h-auto mb:py-3ty')
 	+pie('休日はどっち派？', 'pie1')
-		ul.flex.flex-wrap.mt-4ty.w-full.max-w-4h50.mx-auto.items-center
-			li.w-1h40.my-1ty2
-				+odomete(['1', '%'], 'text-blue-option2 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', '10<br>代', 'flex items-center justify-start', 'flex items-center text-white h-6ty px-5p mr-1ty5 bg-blue-option2')
-			li.w-1h40.my-1ty2
-				+odomete(['24', '%'], 'text-pink-option1 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', '20<br>代', 'flex items-center justify-start', 'flex items-center text-white h-6ty px-5p mr-1ty5 bg-pink-option1')
-			li.w-1h40.my-1ty2
-				+odomete(['15', '%'], 'text-grey-option4 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', '30<br>代', 'flex items-center justify-start', 'flex items-center text-white h-6ty px-5p mr-1ty5 bg-grey-option4')
-			li.w-1h40.my-1ty2
-				+odomete(['30', '%'], 'text-orange-option1 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', '40<br>代', 'flex items-center justify-start', 'flex items-center text-white h-6ty px-5p mr-1ty5 bg-orange-option1')
-			li.w-1h40.my-1ty2
-				+odomete(['30', '%'], 'text-blue-option1 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', '50<br>代', 'flex items-center justify-start', 'flex items-center text-white h-6ty px-5p mr-1ty5 bg-blue-option1')
+		ul.flex.flex-wrap.mt-4ty.w-full.max-w-4h50.mx-auto.items-center(class='mb:mt-2ty')
+			li.w-1h40.my-1ty2(class='mb:w-1h10')
+				+odomete(['1', '%'], 'text-blue-option2 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', '10<br>代', 'flex items-center justify-start', 'flex items-center text-white h-6ty px-5p mr-1ty5 bg-blue-option2 mb:h-5ty')
+			li.w-1h40.my-1ty2(class='mb:w-1h10')
+				+odomete(['24', '%'], 'text-pink-option1 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', '20<br>代', 'flex items-center justify-start', 'flex items-center text-white h-6ty px-5p mr-1ty5 bg-pink-option1 mb:h-5ty')
+			li.w-1h40.my-1ty2(class='mb:w-1h10')
+				+odomete(['15', '%'], 'text-grey-option4 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', '30<br>代', 'flex items-center justify-start', 'flex items-center text-white h-6ty px-5p mr-1ty5 bg-grey-option4 mb:h-5ty')
+			li.w-1h40.my-1ty2(class='mb:w-1h10')
+				+odomete(['30', '%'], 'text-orange-option1 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', '40<br>代', 'flex items-center justify-start', 'flex items-center text-white h-6ty px-5p mr-1ty5 bg-orange-option1 mb:h-5ty')
+			li.w-1h40.my-1ty2(class='mb:w-1h10')
+				+odomete(['30', '%'], 'text-blue-option1 font-en font-medium items-end' ,'text-4ty5', 'text-2ty5 mb-2p', '50<br>代', 'flex items-center justify-start', 'flex items-center text-white h-6ty px-5p mr-1ty5 bg-blue-option1 mb:h-5ty')
 			li.flex-grow
 				+textsub('2018年度','text-right')
 	+lineHeight('-left-px mb:hidden')
-	+lineW('-top-px')
+	//- +lineW('-top-px')

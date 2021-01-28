@@ -24,17 +24,17 @@ mixin odomete(content, class1, class2, class3, title, class4, class5)
 			span.block.leading-none(class= fi_class)!= title
 			if content[1]
 				.odomete-warp.flex.leading-none(class= f_class)
-					.js-odomete.tracking-widest(class= s_class)= content[0]
-					span.last-text.block(class= t_class)= content[1]
+					.js-odomete.tracking-widest(class= s_class + ' mb:text-3ty5 mb:mt-0')= content[0]
+					span.last-text.block(class= t_class + ' mb:text-2ty')= content[1]
 			else 
-				.js-odomete.tracking-widest(class= f_class)= content[0]
+				.js-odomete.tracking-widest(class= f_class + ' mb:text-3ty5 mb:mt-0')= content[0]
 	else 
 		if content[1]
 			.odomete-warp.flex.leading-none(class= f_class)
-				.js-odomete.tracking-widest(class= s_class)= content[0]
-				span.last-text.block(class= t_class)!= content[1]
+				.js-odomete.tracking-widest(class= s_class + ' mb:text-3ty5 mb:mt-0')= content[0]
+				span.last-text.block(class= t_class + ' mb:text-2ty')!= content[1]
 		else 
-			.js-odomete.tracking-widest(class= f_class)= content[0]
+			.js-odomete.tracking-widest(class= f_class + ' mb:text-3ty5 mb:mt-0')= content[0]
 
 mixin odomete2(content, class1, class2, class3)
 	- var f_class= ''
@@ -61,7 +61,7 @@ mixin textsub(content, n_class)
 	- var a_class= ''
 	if n_class 
 		- a_class= n_class
-	p.text-center.text-1ty3.font-medium.leading-none(class= a_class)= content
+	p.text-center.text-1ty3.font-medium.leading-none(class= a_class + ' mb:mt-1ty5')= content
 
 mixin blockimg(img, title, addClass, classp, classf, v_block)
 	- var c_name= ''
@@ -81,18 +81,18 @@ mixin blockimg(img, title, addClass, classp, classf, v_block)
 			- content+= text
 		else
 			- content+= text + '<br>'
-	div(class= name_c + '-inner').h-full.w-full.relative.z-0.flex.justify-center.items-center
+	div(class= name_c + '-inner p-2ty').h-full.w-full.relative.z-0.flex.justify-center.items-center
 		if img
 			figure(class= name_c + '-img' + f_class).absolute.p-2ty.-z-1.top-0.left-0.w-full.h-full.flex.justify-center.items-center
-				img(src= path + 'images/data/img_' + img + '.png', alt= textalt).max-w-full.w-auto
+				img(src= path + 'images/data/img_' + img + '.png', alt= textalt, class='mb:max-w-none mb:h-full').max-w-full.w-auto
 		if !(v_block)
 			div(class= name_c + '-content' + c_name)
-				p.text-2ty.font-bold.text-grey-option7.text-center.leading-tight(class= p_class)!= content 
+				p.text-2ty.font-bold.text-grey-option7.text-center.leading-tight(class= p_class + ' mb:text-default mb:mb-1ty5')!= content 
 				if block
 					block
 		else 
 			div(class= name_c + '-content mr-6ty pl-4ty' + c_name)
-				p.text-2ty.font-bold.text-grey-option7.text-center.leading-tight(class= p_class)!= content 
+				p.text-2ty.font-bold.text-grey-option7.text-center.leading-tight(class= p_class + ' mb:text-default mb:mb-1ty5')!= content 
 				p.text-center.text-1ty3.font-medium.leading-none.mt-3ty 2018年度
 			if block
 				block

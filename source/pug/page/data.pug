@@ -6,8 +6,8 @@ include ../mixin/__data.pug
 - var banner= [false, 'DATA', '数字で見るTERASAKI', true]
 - var mc = 'data'
 - var cm_p= 'tracking-wider leading-1lv9'
-- var cm_grid= 'grid-cols-2 grid mb:grid-cols-1 mb:grid-rows-2'
-- var grid_child= 'grid-cols-2 grid-rows-2 grid'
+- var cm_grid= 'grid-cols-2 grid mb:grid-cols-1'
+- var grid_child= 'grid-cols-2 grid-rows-2 grid mb:grid-cols-1'
 doctype html
 html
 	head 
@@ -22,7 +22,7 @@ html
 				div(class= mc + ' mb:pt-0').pt-4ty
 					+title('働いている人について')
 					- var name_c= 'child-lists'
-					- var tw_child= ' h-2h75 flex justify-center items-center p-2ty relative'
+					- var tw_child= ' h-2h75 flex justify-center items-center relative mb:h-auto'
 					ul.parent-list.font-bold(class= cm_grid +' mb:mt-3ty').mt-5ty
 						include ../layout/data/__block1.pug
 					ul.parent-list.font-bold(class= cm_grid)
