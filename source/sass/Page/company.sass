@@ -8,10 +8,18 @@
     .company
         &-firtView
             padding-bottom: 120px
+            +m()
+                padding-bottom: 60px
             &-linehead
-                margin-top: 95px
+                margin-top: 170px
+                +t()
+                    margin-top: 0px
+                +m()
+                    margin-top: 50px
         &-bulletin, &-infor
             padding: 100px 0px
+            +m()
+                padding: 60px 0px
         &-bulletin
             background-color: $colorBg
             &-board 
@@ -20,11 +28,28 @@
                 justify-content: space-between
                 &:not(:last-of-type) 
                     margin-bottom: 10px
+                &>*
+                    &:first-child
+                        margin-right: 20px
                 &.odd 
+                    +m()
+                        display: block
+                        figure
+                            margin-left: auto
+                            margin-right: auto
                     .company-bulletin-content
                         max-width: 630px
                         padding-right: 20px
+                        +t()
+                            padding: 20px 20px 20px 0px
+                        +m()
+                            margin-left: auto
+                            margin-right: auto
+                            padding: 20px
                 &.even 
+                    +m()
+                        flex-direction: column-reverse
+                        align-items: center
                     .company-bulletin-content
                         max-width: 670px 
                         padding-left: 20px
@@ -34,11 +59,19 @@
                         &>* 
                             max-width: 610px
                             width: 100%
+                        +t()
+                            padding: 20px 0px 20px 20px
+                        +m()
+                            margin-left: auto
+                            margin-right: auto
+                            padding: 20px
             &-title 
                 @extend %__font22
                 color: $colorBlue
                 line-height: 1.6
                 margin-bottom: 20px
+                +m()
+                    margin-bottom: 15px
             &-content 
                 padding-top: 45px
                 padding-bottom: 20px
@@ -58,6 +91,9 @@
                 padding: 20px 30px 10px 30px
                 background-color: $colorBox
                 height: 150px
+                +t()
+                    height: auto
+                    min-height: 150px
             &-dt 
                 font-weight: bold
                 line-height: 1 
@@ -67,12 +103,19 @@
             &-dd 
                 line-height: 1.6
                 margin-top: 12px
+            &-p 
+                margin-bottom: 20px
         &-infor
             &-wrap
                 margin-bottom: 90px
+                +m()
+                    max-width: 600px 
+                    margin: 0px auto 60px
             &-dl 
                 display: flex
                 line-height: 1.6
+                +m()
+                    display: block
                 &:first-of-type
                     dt 
                         border-top: 1px solid $colorBlue
@@ -80,6 +123,8 @@
                         border-top: 1px solid $borderLine
                 &>*
                     padding: 35px 0px
+                    +m()
+                        padding: 15px 0px
             &-dt 
                 font-weight: bold 
                 @extend %__font18
@@ -87,6 +132,10 @@
                 width: 260px
                 min-width: 260px
                 border-bottom: 1px solid $colorBlue
+                +m()
+                    max-width: 100%
+                    width: 100%
+                    min-width: 0px
             &-dd 
                 border-bottom: 1px solid $borderLine
                 width: 100%
@@ -100,16 +149,22 @@
         &-trends
             background-color: $colorBg
             padding: 60px 0px 70px
+            +m()
+                padding: 40px 0px
             &-linehead
                 text-align: center 
                 @extend %__font28
                 margin-bottom: 40px
+                +m()
+                    margin-bottom: 25px
             &-table 
                 max-width: 930px
                 width: 100%
                 margin: 0px auto
                 display: flex
                 justify-content: space-between
+                +m()
+                    min-width: 720px
             &-dl 
                 width: 100%
                 display: flex
@@ -139,6 +194,8 @@
                         line-height: 1.2
         &-history 
             padding: 80px 0px
+            +m()
+                padding: 60px 0px
             &-steps
                 margin-top: 115px
                 z-index: 0
@@ -146,6 +203,8 @@
                 align-items: center 
                 justify-content: space-between
                 position: relative
+                +m()
+                    margin-top: 80px
                 &::before, &::after
                     content: ''
                     position: absolute
@@ -177,6 +236,9 @@
                 margin: 0px auto
                 position: relative
                 align-items: center
+            &-steps 
+                +m()
+                    display: none
             &-step 
                 position: relative 
                 min-width: 18px
@@ -221,6 +283,8 @@
                 transform: translateX(-50%)
                 white-space: nowrap
                 line-height: 1
+                +m()
+                    bottom: calc(100% + 10px)
             .year-num
                 @extend %__font26
                 @extend %__fontOswald
@@ -230,6 +294,8 @@
                 margin-left: 3px
             &-last 
                 margin-top: 50px
+                +m()
+                    margin-top: 30px
                 p 
                     text-align: center
                     &:first-of-type

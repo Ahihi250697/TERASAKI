@@ -1,7 +1,7 @@
 
 .library-cm
-    font-size: 1rem 
-    font-size: clamp(0.88rem, 5vw, 1rem)
+    // font-size: 1rem 
+    // font-size: clamp(0.88rem, 5vw, 1rem)
     img 
         max-width: 100% 
         display: block
@@ -27,8 +27,8 @@
             text-align: justify
             +m()
                 padding: 40px 0px 70px
-    p, dt, dd
-        @extend %__font16
+    // p, dt, dd
+    //     @extend %__font16
     .d-block
         display: block
     .style-title
@@ -55,6 +55,9 @@
         align-items: center
         justify-content: center
         pointer-events: none
+        +m()
+            height: 55px
+            width: 55px
         &::after,&::before
             border-radius: 50%
         &::after

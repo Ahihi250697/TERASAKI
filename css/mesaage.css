@@ -1,22 +1,13 @@
 .library-cm .style-title {
-    font-size: 1em;
-}
-
-.library-cm p, .library-cm dt, .library-cm dd {
-    font-size: 1.6em;
+    font-size: 1rem;
 }
 
 .library-cm .style-title .text-en {
-    font-size: 3em;
+    font-size: 3rem;
 }
 
 .library-cm .style-title .text-nihon {
-    font-size: 2.8em !important;
-}
-
-.library-cm {
-    font-size: 1rem;
-    font-size: clamp(.88rem, 5vw, 1rem);
+    font-size: 2.8rem;
 }
 
 .library-cm img {
@@ -227,8 +218,18 @@
             transform: rotate(50deg);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+    .library-cm .style-title .text-en {
+        font-size: 2.4rem;
+    }
+    .library-cm .style-title .text-nihon {
+        font-size: 2rem;
+    }
     .library-cm p.line-p {
         padding: 40px 0 70px;
+    }
+    .library-cm .bttn-toggle {
+        height: 55px;
+        width: 55px;
     }
 }

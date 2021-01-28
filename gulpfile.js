@@ -131,7 +131,7 @@ gulp.task('tailwind', function(){
             trimLeadingZero: true
         })
     ];
-    return gulp.src('./source/css/tailwind.css')
+    return gulp.src('./source/tailwind.css')
         .pipe(postcss(processors))
         .pipe(gulp.dest('./css/'))
         .pipe(browserSync.reload({

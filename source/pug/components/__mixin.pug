@@ -14,7 +14,7 @@ mixin list-ul(path, surClass, lastClass, img, content, reverse)
 			figure(class= surClass + '-' + lastClass[1])
 				img(src= path + img, alt= content[0])
 			div(class= surClass + '-' + lastClass[2])
-				h3(class= surClass + '-' + lastClass[3])= content[0]
+				h3(class= surClass + '-' + lastClass[3])!= content[0]
 				div(class= surClass + '-text')
 					p(class= surClass + '-p')!= content[1]
 					dl(class= surClass + '-dl')
@@ -23,7 +23,7 @@ mixin list-ul(path, surClass, lastClass, img, content, reverse)
 	else 
 		li(class= surClass + '-' + lastClass[0] + ' even')
 			div(class= surClass + '-' + lastClass[2])
-				h3(class= surClass + '-' + lastClass[3])= content[0]
+				h3(class= surClass + '-' + lastClass[3])!= content[0]
 				div(class= surClass + '-text')
 					p(class= surClass + '-p')!= content[1]
 					dl(class= surClass + '-dl')

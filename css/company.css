@@ -1,43 +1,34 @@
 .library-cm .style-title, .library-cm .company-history-year,
 .library-cm .company-history-last p:first-of-type {
-    font-size: 1em;
-}
-
-.library-cm p, .library-cm dt, .library-cm dd {
-    font-size: 1.6em;
+    font-size: 1rem;
 }
 
 .library-cm .company-infor-dt, .library-cm .company-history .year-text {
-    font-size: 1.8em;
+    font-size: 1.8rem;
 }
 
 .library-cm .style-title .text-en {
-    font-size: 3em;
+    font-size: 3rem;
 }
 
 .library-cm .style-title .text-nihon, .library-cm .company-trends-linehead {
-    font-size: 2.8em !important;
+    font-size: 2.8rem;
 }
 
 .library-cm .company-history .year-num {
-    font-size: 2.6em;
+    font-size: 2.6rem;
 }
 
 .library-cm .company-history-last p:last-of-type {
-    font-size: 2.5em;
+    font-size: 2.5rem;
 }
 
 .library-cm .company-bulletin-title {
-    font-size: 2.2em;
+    font-size: 2.2rem;
 }
 
 .library-cm .company-history .year-num {
     font-family: 'Oswald', sans-serif;
-}
-
-.library-cm {
-    font-size: 1rem;
-    font-size: clamp(.88rem, 5vw, 1rem);
 }
 
 .library-cm img {
@@ -253,7 +244,7 @@
 }
 
 .library-cm .company-firtView-linehead {
-    margin-top: 95px;
+    margin-top: 170px;
 }
 
 .library-cm .company-bulletin, .library-cm .company-infor {
@@ -276,6 +267,10 @@
 
 .library-cm .company-bulletin-board:not(:last-of-type) {
     margin-bottom: 10px;
+}
+
+.library-cm .company-bulletin-board > *:first-child {
+    margin-right: 20px;
 }
 
 .library-cm .company-bulletin-board.odd .company-bulletin-content {
@@ -361,6 +356,10 @@
 .library-cm .company-bulletin-dd {
     line-height: 1.6;
     margin-top: 12px;
+}
+
+.library-cm .company-bulletin-p {
+    margin-bottom: 20px;
 }
 
 .library-cm .company-infor-wrap {
@@ -645,9 +644,125 @@
     margin-top: 5px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
+    .library-cm .company-firtView-linehead {
+        margin-top: 0;
+    }
+    .library-cm .company-bulletin-board.odd .company-bulletin-content {
+        padding: 20px 20px 20px 0;
+    }
+    .library-cm .company-bulletin-board.even .company-bulletin-content {
+        padding: 20px 0 20px 20px;
+    }
+    .library-cm .company-bulletin-dl {
+        height: auto;
+        min-height: 150px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .library-cm .company-infor-dt, .library-cm .company-history .year-text {
+        font-size: 1.4rem;
+    }
+    .library-cm .style-title .text-en {
+        font-size: 2.4rem;
+    }
+    .library-cm .style-title .text-nihon, .library-cm .company-trends-linehead {
+        font-size: 2rem;
+    }
+    .library-cm .company-history .year-num {
+        font-size: 1.8rem;
+    }
+    .library-cm .company-history-last p:last-of-type {
+        font-size: 2rem;
+    }
+    .library-cm .company-bulletin-title {
+        font-size: 1.8rem;
+    }
     .library-cm p.line-p {
         padding: 40px 0 70px;
+    }
+    .library-cm .bttn-toggle {
+        height: 55px;
+        width: 55px;
+    }
+    .library-cm .company-firtView {
+        padding-bottom: 60px;
+    }
+    .library-cm .company-firtView-linehead {
+        margin-top: 50px;
+    }
+    .library-cm .company-bulletin, .library-cm .company-infor {
+        padding: 60px 0;
+    }
+    .library-cm .company-bulletin-board.odd {
+        display: block;
+    }
+
+    .library-cm .company-bulletin-board.odd figure {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .library-cm .company-bulletin-board.odd .company-bulletin-content {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
+    .library-cm .company-bulletin-board.even {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .library-cm .company-bulletin-board.even .company-bulletin-content {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
+    .library-cm .company-bulletin-title {
+        margin-bottom: 15px;
+    }
+    .library-cm .company-infor-wrap {
+        max-width: 600px;
+        margin: 0 auto 60px;
+    }
+    .library-cm .company-infor-dl {
+        display: block;
+    }
+    .library-cm .company-infor-dl > * {
+        padding: 15px 0;
+    }
+    .library-cm .company-infor-dt {
+        max-width: 100%;
+        width: 100%;
+        min-width: 0;
+    }
+    .library-cm .company-trends {
+        padding: 40px 0;
+    }
+    .library-cm .company-trends-linehead {
+        margin-bottom: 25px;
+    }
+    .library-cm .company-trends-table {
+        min-width: 720px;
+    }
+    .library-cm .company-history {
+        padding: 60px 0;
+    }
+    .library-cm .company-history-steps {
+        margin-top: 80px;
+    }
+    .library-cm .company-history-steps {
+        display: none;
+    }
+    .library-cm .company-history-year {
+        bottom: calc(100% + 10px);
+    }
+    .library-cm .company-history-last {
+        margin-top: 30px;
     }
 }
 
