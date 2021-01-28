@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "./functions.scss";
+@import "../css/functions.scss";
 $font_oswald: 'Oswald',
 sans-serif;
 body {
@@ -195,7 +195,7 @@ figure {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 6rem;
+    padding-right: 60px;
     li {
         display: inline-flex;
         &:first-child {
@@ -227,14 +227,14 @@ figure {
     width: 100%;
     background-color: #2769de;
     text-align: center;
-    padding-top: 11rem;
-    padding-bottom: 8.5rem;
+    padding: 86px 0;
     .entry {
         font-family: $font_oswald;
         font-size: 6.5rem;
         font-weight: 500;
         color: #fff;
-        letter-spacing: .5rem;
+        letter-spacing: 12px;
+        line-height: 1.55;
     }
     .entry-desc {
         font-size: 1.8rem;
@@ -254,8 +254,8 @@ figure {
 
 .copy-right {
     width: 100%;
-    padding-bottom: 3rem;
-    padding-top: 3rem;
+    min-height: 80px;
+    padding: 27px 0;
     color: #fff;
     text-align: center;
     font-size: 1.6rem;
