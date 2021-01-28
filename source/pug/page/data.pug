@@ -19,11 +19,11 @@ html
 			include ../layout/__partbanner.pug
 			.container
 				- mc= 'blockOne'
-				div(class= mc).pt-4ty
+				div(class= mc + ' mb:pt-0').pt-4ty
 					+title('働いている人について')
 					- var name_c= 'child-lists'
 					- var tw_child= ' h-2h75 flex justify-center items-center p-2ty relative'
-					ul.parent-list.font-bold(class= cm_grid).mt-5ty
+					ul.parent-list.font-bold(class= cm_grid +' mb:mt-3ty').mt-5ty
 						include ../layout/data/__block1.pug
 					ul.parent-list.font-bold(class= cm_grid)
 						include ../layout/data/__block2.pug

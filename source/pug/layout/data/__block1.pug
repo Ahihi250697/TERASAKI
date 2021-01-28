@@ -3,7 +3,7 @@ li.parent-lists
 		li(class= name_c + tw_child)
 			mixin block1(content)
 				div(class= name_c + '-line').flex.items-center
-					span.block.text-2ty.text-right.leading-tight.mr-1ty5.text-grey-option7!= content
+					span.block.text-2ty.text-right.leading-tight.mr-1ty5.text-grey-option7(class="mb:text-default")!= content
 					if block
 						block
 			div(class= name_c + '-inner')
