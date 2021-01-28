@@ -1,0 +1,58 @@
+<section class="relative hero tl:mt-6ty">
+	- var r_class= ''
+	- var f_class= 'text-5ty'
+	- var s_class= 'text-2ty mt-2ty5'
+	if banner[3]
+		- r_class= 'relative z-0'
+	if banner[4]
+		- f_class= banner[4]
+		- s_class= banner[5]
+	div(class= r_class +' tl:relative')
+		<div class="hero__content">
+			<figure>
+				<img src="#{path}images/#{page}/img_banner.jpg" alt="picture">
+			</figure>
+		</div>
+		if banner[3]
+			<div class="absolute transform -translate-x-1/2 -translate-y-1/2 z-1 top-2/4 left-2/4">
+				<h2 class="font-medium leading-none text-white">
+					<span class="block tracking-widest text-center font-en text-5ty mb:text-2ty4 mb:whitespace-nowrap">#{banner[1]}</span>
+					<span class="block text-center text-2ty mt-2ty5 mb:text-default mb:1ty5">#{banner[2]}</span>
+				</h2>
+			</div>
+		if banner[0]
+			<div class="absolute bottom-0 transform -translate-x-1/2 translate-y-1/2 z-2 left-2/4 tl:bottom-auto tl:top-2/4 tl:-translate-y-1/2">
+				<h2 class="font-medium leading-none">
+					<span class="block tracking-widest text-center #{f_class} font-en text-blue-custom1 mb:text-2ty4 mb:whitespace-nowrap tl:text-white">#{banner[1]}</span>
+					<span class="block text-center #{s_class} mb:text-default mb:1ty5 tl:text-white">#{banner[2]}</span>
+				</h2>
+			</div>
+	if banner[0]
+		<div class="container relative bg-white cm__container">
+			<ul class="absolute inset-auto bottom-0 left-0 bg-white breadcrumb pt-5ty pb-6ty z-1 tl:relative mb:py-0 mb:my-3ty">
+				<li>
+					<a href="#{path}">
+						| TOP
+					</a>
+				</li>
+				<li>
+					<a href="">#{banner[2]}</a>
+				</li>
+			</ul>
+		</div>
+</section>
+if banner[3]
+	<section class="cm">
+		<div class="container cm__container">
+			<ul class="breadcrumb mt-6ty mb-7ty mb:my-3ty">
+				<li>
+					<a href="#{path}">
+						| TOP
+					</a>
+				</li>
+				<li>
+					<a href="">#{banner[2]}</a>
+				</li>
+			</ul>
+		</div>
+	</section>

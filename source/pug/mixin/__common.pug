@@ -5,3 +5,7 @@ mixin head(title, css, fonts)
 	title= title
 	if fonts
 		include ../components/__fonts.pug
+		
+mixin addjs(js)
+	each val in js
+		<script src="#{path + val}"></script>

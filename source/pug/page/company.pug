@@ -1,20 +1,25 @@
 include ../components/__mixin.pug
+include ../mixin/__common.pug
 include ../components/__variables.pug
 
 - var path = '../'
 - var surClass = 'company'
+- var page= 'company'
+- var banner= [true, 'COMPANY PROFILE', '会社情報', false, 'text-3ty', 'text-2ty8 mt-1ty5']
 doctype html
 html
     head 
         include ../components/__meta.pug
-        +head( 'COMPANY', ['assets/css/reset.css', 'assets/css/bootstrap_custom.css', 'css/common.css', 'css/company.css'], true )
+        +head( 'COMPANY', ['assets/css/reset.css', 'assets/css/bootstrap_custom.css', 'css/common.css', 'css/tailwind.css' ,'css/company.css'], true )
     body 
+        include ../layout/__header.pug
         main(class= surClass)
+            include ../layout/__partbanner.pug
             .library-cm
                 - surClass= 'company-firtView'
                 section(class= surClass)
                     .container 
-                        +title_h2(surClass, classTitle, ['COMPANY PROFILE', '会社情報'])
+                        //- +title_h2(surClass, classTitle, ['COMPANY PROFILE', '会社情報'])
                         p(class= surClass + '-linehead')
                             | 最先端テクノロジーを扱う寺崎電気産業。しかしその歴史は意外と古く、1923年にスイッチメーカーとしてスタートしました。
                             br

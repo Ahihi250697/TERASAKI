@@ -1,16 +1,21 @@
 include ../components/__mixin.pug
+include ../mixin/__common.pug
 include ../mixin/__factory.pug
 - var path = '../'
+- var page= 'factory'
 - var mc = 'factory'
 - var cm_p= 'tracking-wider leading-1lv9'
 - var count = 0
+- var banner= [false, 'DOMESTIC FACTORY', '国内事業所', true]
 doctype html
 html
 	head 
 		include ../components/__meta.pug
 		+head('FACTORY', ['assets/css/reset.css', 'assets/css/bootstrap_custom.css', 'css/common.css', 'css/tailwind.css'], true )
 	body 
+		include ../layout/__header.pug
 		main(class= mc).font-medium
+			include ../layout/__partbanner.pug
 			.library-cm
 				div(class= mc + '-map mb:py-3ty').bg-blue-custom2.pt-8ty.pb-6ty5
 					.container
@@ -19,7 +24,7 @@ html
 				- mc= 'contentBlock'
 				div(class= mc).overflow-hidden
 					.container
-						ul(class= mc + '-list mb:mt-6ty').mt-1h10
+						ul(class= mc + '-list mb:mt-6ty').pb-5ty.border-b.border-grey-option3.border-solid
 							+list([
 								'東北営業所',
 								'仙台市',
@@ -70,3 +75,5 @@ html
 							], `就職は人生の大きな分岐点です。<br>
 							貴方は5年後・10年後どうなっていたいですか？<br>
 							テラサキには、あなたが活躍できる舞台があります。貴方の熱意と個性を思いっきり発揮できる職場で一緒にがんばりましょう！`)
+		include ../layout/__footer.pug
+		+addjs(['assets/js/jquery-3.5.1.min.js', 'js/common.js'])
