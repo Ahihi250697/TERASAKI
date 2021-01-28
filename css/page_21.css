@@ -1,0 +1,17 @@
+.other-link {
+    justify-content: center;
+}
+
+.other-link .other-people:not(:first-child) {
+    margin-left: 85px;
+    background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .other-link {
+        justify-content: space-between;
+    }
+    .other-link .other-people:not(:first-child) {
+        margin-left: 0;
+    }
+}
