@@ -198,6 +198,7 @@ module.exports = {
         '1th1h5': '1150px',
         '1th2h': '1200px',
         'calc2_2ty': 'calc(50% + 20px)',
+        'calc2-6h70': 'calc(50% - 670px)',
       },
       height: {
         'lv1': '10px',
@@ -240,7 +241,8 @@ module.exports = {
         '6ty': '60px',
         '-1h20': '-120px',
         '1h25': '125px',
-        '-1h85': '-185px'
+        '-1h85': '-185px',
+        '5h': '500px'
       },
       lineHeight: {
         '1lv7': '1.7',

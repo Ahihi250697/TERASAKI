@@ -20,6 +20,8 @@ mixin list-ul(path, surClass, lastClass, img, content, reverse)
 					dl(class= surClass + '-dl')
 						dt(class= surClass + '-dt')= content[2]
 						dd(class= surClass + '-dd')= content[3]
+			if block
+				block
 	else 
 		li(class= surClass + '-' + lastClass[0] + ' even')
 			div(class= surClass + '-' + lastClass[2])
@@ -31,7 +33,8 @@ mixin list-ul(path, surClass, lastClass, img, content, reverse)
 						dd(class= surClass + '-dd')= content[3]
 			figure(class= surClass + '-' + lastClass[1])
 				img(src= path + img, alt= content[0])
-
+			if block
+				block
 
 mixin list-infor(surClass, lastClass, contents)
 	div(class= surClass + '-' + lastClass[0])

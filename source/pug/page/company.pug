@@ -10,14 +10,14 @@ doctype html
 html
 	head 
 		include ../components/__meta.pug
-		+head( 'COMPANY', ['assets/css/reset.css', 'assets/css/bootstrap_custom.css', 'css/common.css', 'css/tailwind.css' ,'css/company.css', 'css/fixie.css'], true )
+		+head( 'COMPANY', ['assets/css/reset.css', 'assets/css/bootstrap_custom.css', 'css/common.css', 'css/tailwind.css'], true )
 	body 
 		include ../layout/__header.pug
 		main(class= surClass)
 			include ../layout/__partbanner.pug
 			.library-cm
 				- surClass= 'company-firtView'
-				section(class= surClass)
+				section(class= surClass + ' relative')
 					.container 
 						//- +title_h2(surClass, classTitle, ['COMPANY PROFILE', '会社情報'])
 						p(class= surClass + '-linehead')
@@ -26,10 +26,14 @@ html
 							| その後、配電盤の製造販売に乗り出し、大型船舶や地下鉄駅舎等へ製品を納入してきました。1960年代に世界初の「限流ブレーカ」を開発。また、配電盤業界において創業90年を超える当社は「老舗」と呼べる存在ですが、もちろん企業たるもの古いだけでは存続できません。1960年からエレクトロニクス分野、1970年から海外へ進出し、地球温暖化防止に貢献する「コージェネレーションシステム」へもいち早く取り組み、2010年には、船舶のCO2排出削減に大きく寄与する「陸上電力供給システム」及び「船舶向け太陽光発電システム」の設計・施工を手掛けました。90年の歴史はフロンティア精神旺盛なチャレンジの歴史でもあります。国際規格ISO9000シリーズ、ISO14000シリーズ、ISO13485、OHSAS18001も取得済。
 							br
 							| 2007年3月にはジャスダック証券取引所（現　株式会社東京証券取引所ジャスダック市場）へ上場しました。
+					span.block.absolute.bottom-full.right-0.-z-1(class="mb:hidden")
+						img(src= path + 'images/message/img_pattern2.png' alt="pattern")
 				- surClass= 'company-bulletin'
-				section(class= surClass)
+				section(class= surClass + ' relative z-0')
+					span.absolute.top-5h.left-0.w-full.max-w-calc2-6h70.flex.justify-end.z-1(class="mb:hidden")
+						img(src= path + 'images/message/img_pattern1.png' alt="pattern")
 					.container
-						ul(class= surClass + '-boards')
+						ul(class= surClass + '-boards relative')
 							+list-ul(path, surClass, ['board', 'img', 'content', 'title'], 'images/company/img_photo1.jpg',[
 								'船舶用システム製品',
 								'世界の海運・造船界を支える舶用工業メーカーとして半世紀以上にわたり、世界トップレベルの配電制御システムや機関監視制御システムを提供しています。主にLNG船・大型客船・コンテナ船など1万トンを超える規模の船舶へ納品しています。<br>これらの技術・ノウハウを活かし、製品作りのみならず施工・保守管理などのエンジニアリングも行っています。',

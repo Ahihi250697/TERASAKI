@@ -17,6 +17,7 @@
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat-css": "^3.1.0",
     "gulp-ejs": "^5.1.0",
     "gulp-format-html": "^1.2.5",
     "gulp-html-beautify": "^1.0.1",

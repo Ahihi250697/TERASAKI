@@ -9,7 +9,7 @@ const imagemin = require('gulp-imagemin');
 const prettyhtml = require('gulp-format-html');
 // const plumber = require('gulp-plumber');
 const ejs = require('gulp-ejs');
-const removeCss = require('gulp-purgecss');
+const concat = require('gulp-concat-css');
 
 const path = require('path');
 const browserSync = require('browser-sync').create();
@@ -77,10 +77,36 @@ gulp.task('img', function(){
 });
 
 gulp.task('sass', function(){
+    let processors = [
+        // suit({
+        //     defaultNamespace: undefined,
+        //     style: 'suit',
+        //     separators: {
+        //         descendent: '__'
+        //     },
+        //     shortcuts: {
+        //         utility: 'util'
+        //     }
+        // }),
+        postcssPresetEnv({ browsers: 'last 2 versions' }),
+        sortMediaQueries({
+            sort: 'desktop-first'
+        }),
+        // cssnano,
+        autoprefixer('last 2 versions', { cascade: false}),
+        // perfectCss({
+        //     cascade: true,
+        //     sourcemap: true,
+        //     colorCase: 'lower',
+        //     colorShorthand: true,
+        //     trimLeadingZero: true
+        // })
+    ];
     return gulp.src('./source/sass/Page/*.sass')
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(sourcemaps.write('./sourcemap'))
+        .pipe(postcss(processors))
+        // .pipe(sourcemaps.write('./sourcemap'))
         .pipe(gulp.dest('./source/css/'))
         .pipe(browserSync.reload({
             stream: true
@@ -130,7 +156,7 @@ gulp.task('tailwind', function(){
           },
           ),
         autoprefixer('last 2 versions', { cascade: false}),
-        cssnano,
+        // cssnano,
         // perfectCss({
         //     cascade: true,
         //     sourcemap: true,
@@ -141,13 +167,17 @@ gulp.task('tailwind', function(){
     ];
     return gulp.src('./source/tailwind.css')
         .pipe(postcss(processors))
-        // .pipe(removeCss({
-        //     content: ['./**/*.html']
-        // }))
-        .pipe(gulp.dest('./css/'))
+        .pipe(gulp.dest('./source/css/'))
         .pipe(browserSync.reload({
             stream: true
     }));
+})
+
+gulp.task('concat', function(){
+    return gulp.src('./source/css/*.css')
+        .pipe(concat("tailwind.css"))
+        .pipe(postcss([cssnano()]))
+        .pipe(gulp.dest('./css/'))
 })
 
 gulp.task('ejs', function(){
@@ -172,7 +202,7 @@ gulp.task('ejs', function(){
 gulp.task('watch', function() {
     gulp.watch('./tailwind.config.js', gulp.series('tailwind'));
     gulp.watch('./source/sass/**/*.sass', gulp.series('sass'));
-    gulp.watch('./source/css/*.css', gulp.series('css'));
+    gulp.watch('./source/css/*.css', gulp.series('concat'));
     gulp.watch('./source/pug/**/*.pug', gulp.series('pug'));
     gulp.watch(['./source/sass/**/*.sass', './source/pug/**/*.pug'], gulp.series('browserSync'));
   });
