@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="ja">
+<!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -14,32 +14,217 @@
     <meta property="og:description" content="">
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <link rel="icon" type="image/png" href="./images/commons/icon_favicon.png">
     <link href="./assets/css/reset.css" rel="stylesheet">
     <link href="./assets/css/bootstrap_custom.css" rel="stylesheet">
     <link href="./css/common.css" rel="stylesheet">
-    <!-- build:addcss -->
-    <title></title>
-
+    <link href="./css/tailwind.css" rel="stylesheet">
+    <title>TOP</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <!-- #region: header-->
-
-        <!-- #endregion -->
+        <nav class="nav">
+            <h1 class="nav__logo">
+                <a href="./">
+                    <img src="./images/common/img_logo.png" alt="">
+                </a>
+            </h1>
+            <ul class="nav__navbar">
+                <li>
+                    <a class="orange" href="#">インターンシップ</a>
+                </li>
+                <li>
+                    <a class="dark-blue" href="#">マイページ</a>
+                </li>
+            </ul>
+            <div class="nav-mark"></div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
     </header>
-    <main>
-        <!-- #region: main -->
-
-        <!-- #endregion -->
+    <main class="toppage">
+        <div class="library-cm">
+            <section class="mvBlock max-h-screen bg-mv bg-cover bg-no-repeat relative z-0">
+                <div class="aspect-w-16 aspect-h-10"></div>
+                <figure class="absolute w-9/12 -translate-x-1/2 -translate-y-1/2 top-2/4 left-2/4 transform z-1 flex items-center max-w-900">
+                    <img src="./images/top/img_logo.png" alt="logo">
+                </figure>
+            </section>
+            <section class="business mb:py-5ty pt-lv13 pb-lv11_5 bg-blue-custom2 font-medium">
+                <div class="container">
+                    <h2 class="style-h2 mb:mb-3ty mb-24 font-medium">
+                        <span class="mb:text-default mb:leading-none text-lv2 block text-center leading-normal">世界トップクラスの事業</span>
+                        <span class="mb:text-2ty4 mb:mt-7p text-lv4 text-blue-custom1 block text-center font-en leading-none mt-2">OUR BUSINESS</span>
+                    </h2>
+                    <div class="business-wrap mb:block mb:max-w-6h50 mb:mx-auto flex">
+                        <a class="mb:max-w-full block max-w-half w-full" href="#">
+                            <figure class="business-img relative z-0">
+                                <img src="./images/top/img_business.jpg" alt="世界トップクラスの事業">
+                                <div class="business-tInner top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 absolute z-1 text-white transform">
+                                    <span class="block text-center leading-none font-en mb-6">WORK</span>
+                                    <span class="block text-center leading-normal">事業紹介</span>
+                                </div>
+                            </figure>
+                        </a>
+                        <ul class="business-lists mb:max-w-full mb:pl-0 mb:mt-2ty max-w-half w-full pl-16 flex flex-col">
+                            <li class="business-list w-full h-full border-b border-colour-1 border-solid px-lv1_6 flex items-center">
+                                <a class="mb:py-1ty text-black flex items-center" href="#">船舶用システム製品<svg class="stroke-current text-blue-custom1 h-1ty5 ml-1ty" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="business-list w-full h-full border-b border-colour-1 border-solid px-lv1_6 flex items-center">
+                                <a class="mb:py-1ty text-black flex items-center" href="#">産業用システム製品<svg class="stroke-current text-blue-custom1 h-1ty5 ml-1ty" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="business-list w-full h-full border-b border-colour-1 border-solid px-lv1_6 flex items-center">
+                                <a class="mb:py-1ty text-black flex items-center" href="#">機器（ブレーカ）製品<svg class="stroke-current text-blue-custom1 h-1ty5 ml-1ty" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="business-list w-full h-full border-b border-colour-1 border-solid px-lv1_6 flex items-center">
+                                <a class="mb:py-1ty text-black flex items-center" href="#">メディtカルデバイス<svg class="stroke-current text-blue-custom1 h-1ty5 ml-1ty" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="environment mb:mt-7ty mt-lv8_5">
+                <div class="container">
+                    <h2 class="style-h2 mb:mb-3ty mb-24 font-medium">
+                        <span class="mb:text-default mb:leading-none text-lv2 block text-center leading-normal">働く環境を知る</span>
+                        <span class="mb:text-2ty4 mb:mt-7p text-lv4 text-blue-custom1 block text-center font-en leading-none mt-2">ENVIRONMENT</span>
+                    </h2>
+                </div>
+                <div class="environment-wrap mb:mt-0 mb:mx-auto mb:block mb:max-w-4h80 flex mt-lv7_5">
+                    <figure class="environment-img mb:mb-2p mb:last:mb-0 w-full relative">
+                        <img src="./images/top/img_invironment_photo1.jpg" alt="働く環境を知る">
+                        <figcaption class="mb:left-2ty mb:bottom-2ty absolute left-lv5 bottom-lv3_5 leading-none text-white">キャリアデザイン<svg class="h-lv1_2 ml-lv2_5 mb:ml-1ty5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </figcaption>
+                    </figure>
+                    <figure class="environment-img mb:mb-2p mb:last:mb-0 w-full relative">
+                        <img src="./images/top/img_invironment_photo2.jpg" alt="働く環境を知る">
+                        <figcaption class="mb:left-2ty mb:bottom-2ty absolute left-lv5 bottom-lv3_5 leading-none text-white">インターンシップ<svg class="h-lv1_2 ml-lv2_5 mb:ml-1ty5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </figcaption>
+                    </figure>
+                    <figure class="environment-img mb:mb-2p mb:last:mb-0 w-full relative">
+                        <img src="./images/top/img_invironment_photo3.jpg" alt="働く環境を知る">
+                        <figcaption class="mb:left-2ty mb:bottom-2ty absolute left-lv5 bottom-lv3_5 leading-none text-white">福利厚生制度<svg class="h-lv1_2 ml-lv2_5 mb:ml-1ty5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section class="people mb:flex-col-reverse mb:mt-7ty mt-lv14_5 flex">
+                <figure class="people-img max-w-calc2_40 mb:max-w-full w-full">
+                    <img src="images/top/img_people.jpg" alt="人を知る">
+                </figure>
+                <div class="people-contents mb:max-w-full mb:px-2ty mb:py-3ty text-white max-w-calc2-40 w-full bg-blue-custom3 pr-lv2">
+                    <div class="people-title mb:max-w-full max-w-520 w-full flex flex-col font-medium items-end justify-center h-full">
+                        <h2 class="style-h2 mb:mx-auto mb:mb-3ty mb-lv7 max-w-260 w-full">
+                            <span class="text-lv2_4 block text-center leading-normal mb:text-1ty8">人を知る</span>
+                            <span class="text-lv4 block text-center font-en leading-none mt-2 mb:text-2ty4">PEOPLE</span>
+                        </h2>
+                        <button class="bg-transparent border w-full h-lv6_5 max-w-260 border-white text-white mb:mx-auto mb:h-5ty hover:opacity-80 transition-all duration-300">社員一覧を見る</button>
+                    </div>
+                </div>
+            </section>
+            <section class="female mb:mt-7ty mt-lv11">
+                <div class="container">
+                    <div class="female-wrap mb:h-2h50 h-lv30 flex justify-end relative z-0">
+                        <div class="female-img mb:bg-custom_right h-full bg-female bg-no-repeat bg-cover w-full max-w-730"></div>
+                        <div class="female-content absolute top-0 left-0 z-1 h-full flex flex-col justify-between items-start">
+                            <span class="mb:text-default table bg-blue-custom1 text-lv2 text-white px-lv2 py-7p leading-none">女性社員座談会</span>
+                            <figure>
+                                <img src="./images/top/img_text.png" alt="女性社員座談会">
+                            </figure>
+                            <button class="bg-transparent border w-full h-lv6_5 max-w-260 border-black mb:h-5ty hover:opacity-80 transition-all duration-300">詳細を見る</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="companyTop mb:mt-7ty mt-lv10 font-medium">
+                <h2 class="style-h2 mb:mb-3ty mb-24 font-medium">
+                    <span class="mb:text-default mb:leading-none text-lv2 block text-center leading-normal">会社を知る</span>
+                    <span class="mb:text-2ty4 mb:mt-7p text-lv4 text-blue-custom1 block text-center font-en leading-none mt-2">COMPANY</span>
+                </h2>
+                <div class="companyTop-wrap mb:block mb:max-w-4h80 mb:mx-auto flex font-medium">
+                    <a class="block-link block w-full max-w-calc3 mb:max-w-full mb:mb-2p mb:last:mb-0">
+                        <figure class="relative">
+                            <img src="./images/top/img_company_photo1.jpg" alt="事業所紹介">
+                            <figcaption class="text-white whitespace-nowrap text-lv2 absolute z-1 transform -translate-x-1/2 -translate-y-1/2 top-2/4 left-2/4 mb:text-default">事業所紹介</figcaption>
+                        </figure>
+                    </a>
+                    <a class="block-link block w-full max-w-calc3 mb:max-w-full mb:mb-2p mb:last:mb-0">
+                        <figure class="relative">
+                            <img src="./images/top/img_company_photo2.jpg" alt="社長メッセージ">
+                            <figcaption class="text-white whitespace-nowrap text-lv2 absolute z-1 transform -translate-x-1/2 -translate-y-1/2 top-2/4 left-2/4 mb:text-default">社長メッセージ</figcaption>
+                        </figure>
+                    </a>
+                    <a class="block-link block w-full max-w-calc3 mb:max-w-full mb:mb-2p mb:last:mb-0">
+                        <figure class="relative">
+                            <img src="./images/top/img_company_photo3.jpg" alt="数字でみるTERASAKI">
+                            <figcaption class="text-white whitespace-nowrap text-lv2 absolute z-1 transform -translate-x-1/2 -translate-y-1/2 top-2/4 left-2/4 mb:text-default">数字でみるTERASAKI</figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="mb:px-2ty mb:max-w-4h80 mb:mx-auto">
+                    <button class="bg-transparent border w-full h-lv6_5 max-w-545 border-black m-auto block mt-lv6_5 mb:mt-4ty mb:h-5ty hover:opacity-80 transition-all duration-300">会社概要</button>
+                </div>
+            </section>
+            <section class="lastBlock mb:py-4ty mb:mt-6ty mt-lv11_5 py-lv6_5 bg-blue-custom2 font-medium">
+                <div class="container">
+                    <div class="lastBlock-wrap mb:block flex justify-between">
+                        <div class="max-w-calc2-1 w-full text-center bg-white pt-lv5 pb-lv6_5 mb:max-w-full mb:py-3ty mb:mb-2p mb:last:mb-0">
+                            <img class="inline" src="./images/top/img_icon1.png" alt="募集要項／選考プロセス">
+                            <span class="mb:text-default block text-lv1_8 text-center mt-lv2">募集要項／選考プロセス</span>
+                        </div>
+                        <div class="max-w-calc2-1 w-full text-center bg-white pt-lv5 pb-lv6_5 mb:max-w-full mb:py-3ty mb:mb-2p mb:last:mb-0">
+                            <img class="inline" src="./images/top/img_icon2.png" alt="よくあるご質問">
+                            <span class="mb:text-default block text-lv1_8 text-center mt-lv2">よくあるご質問</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
-        <!-- #region: footer -->
-
-        <!-- #endregion -->
+        <div class="footer__container">
+            <p class="entry">ENTRY</p>
+            <p class="entry-desc">マイページ画面よりエントリーいただけます</p>
+        </div>
+        <div class="copy-right">
+            <p>Copyright © TERASAKI ELECTRIC CO.,LTD All rights reserved</p>
+        </div>
     </footer>
+    <div class="loading">
+        <div class="loading-icon">
+        </div>
+        <div class="loading-text">Loading
+            <span class="loading-dots">.</span>
+            <span class="loading-dots">.</span>
+            <span class="loading-dots">.</span>
+        </div>
+    </div>
     <script src="./assets/js/jquery-3.5.1.min.js"></script>
-
+    <script src="./js/common.js"></script>
 </body>
 
 </html>
