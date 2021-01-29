@@ -19,7 +19,6 @@
     <link href="./assets/css/bootstrap_custom.css" rel="stylesheet">
     <link href="./css/common.css" rel="stylesheet">
     <link href="./css/tailwind.css" rel="stylesheet">
-    <link href="./css/fixie.css" rel="stylesheet">
     <title>TOP</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -143,7 +142,7 @@
                             <span class="text-lv2_4 block text-center leading-normal mb:text-1ty8">人を知る</span>
                             <span class="text-lv4 block text-center font-en leading-none mt-2 mb:text-2ty4">PEOPLE</span>
                         </h2>
-                        <button class="bg-transparent border w-full h-lv6_5 max-w-260 border-white text-white mb:mx-auto mb:h-5ty">社員一覧を見る</button>
+                        <button class="bg-transparent border w-full h-lv6_5 max-w-260 border-white text-white mb:mx-auto mb:h-5ty hover:opacity-80 transition-all duration-300">社員一覧を見る</button>
                     </div>
                 </div>
             </section>
@@ -156,17 +155,17 @@
                             <figure>
                                 <img src="./images/top/img_text.png" alt="女性社員座談会">
                             </figure>
-                            <button class="bg-transparent border w-full h-lv6_5 max-w-260 border-black mb:h-5ty">詳細を見る</button>
+                            <button class="bg-transparent border w-full h-lv6_5 max-w-260 border-black mb:h-5ty hover:opacity-80 transition-all duration-300">詳細を見る</button>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="company mb:mt-7ty mt-lv10 font-medium">
+            <section class="companyTop mb:mt-7ty mt-lv10 font-medium">
                 <h2 class="style-h2 mb:mb-3ty mb-24 font-medium">
                     <span class="mb:text-default mb:leading-none text-lv2 block text-center leading-normal">会社を知る</span>
                     <span class="mb:text-2ty4 mb:mt-7p text-lv4 text-blue-custom1 block text-center font-en leading-none mt-2">COMPANY</span>
                 </h2>
-                <div class="company-wrap mb:block mb:max-w-4h80 mb:mx-auto flex font-medium">
+                <div class="companyTop-wrap mb:block mb:max-w-4h80 mb:mx-auto flex font-medium">
                     <a class="block-link block w-full max-w-calc3 mb:max-w-full mb:mb-2p mb:last:mb-0">
                         <figure class="relative">
                             <img src="./images/top/img_company_photo1.jpg" alt="事業所紹介">
@@ -187,7 +186,7 @@
                     </a>
                 </div>
                 <div class="mb:px-2ty mb:max-w-4h80 mb:mx-auto">
-                    <button class="bg-transparent border w-full h-lv6_5 max-w-545 border-black m-auto block mt-lv6_5 mb:mt-4ty mb:h-5ty">会社概要</button>
+                    <button class="bg-transparent border w-full h-lv6_5 max-w-545 border-black m-auto block mt-lv6_5 mb:mt-4ty mb:h-5ty hover:opacity-80 transition-all duration-300">会社概要</button>
                 </div>
             </section>
             <section class="lastBlock mb:py-4ty mb:mt-6ty mt-lv11_5 py-lv6_5 bg-blue-custom2 font-medium">
@@ -215,6 +214,15 @@
             <p>Copyright © TERASAKI ELECTRIC CO.,LTD All rights reserved</p>
         </div>
     </footer>
+    <div class="loading">
+        <div class="loading-icon">
+        </div>
+        <div class="loading-text">Loading
+            <span class="loading-dots">.</span>
+            <span class="loading-dots">.</span>
+            <span class="loading-dots">.</span>
+        </div>
+    </div>
     <script src="./assets/js/jquery-3.5.1.min.js"></script>
     <script src="./js/common.js"></script>
 </body>

@@ -19,8 +19,6 @@
     <link href="../assets/css/bootstrap_custom.css" rel="stylesheet">
     <link href="../css/common.css" rel="stylesheet">
     <link href="../css/tailwind.css" rel="stylesheet">
-    <link href="../css/company.css" rel="stylesheet">
-    <link href="../css/fixie.css" rel="stylesheet">
     <title>COMPANY</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -77,17 +75,23 @@
             </div>
         </section>
         <div class="library-cm">
-            <section class="company-firtView">
+            <section class="company-firtView relative">
                 <div class="container">
                     <p class="company-firtView-linehead">最先端テクノロジーを扱う寺崎電気産業。しかしその歴史は意外と古く、1923年にスイッチメーカーとしてスタートしました。
                         <br>その後、配電盤の製造販売に乗り出し、大型船舶や地下鉄駅舎等へ製品を納入してきました。1960年代に世界初の「限流ブレーカ」を開発。また、配電盤業界において創業90年を超える当社は「老舗」と呼べる存在ですが、もちろん企業たるもの古いだけでは存続できません。1960年からエレクトロニクス分野、1970年から海外へ進出し、地球温暖化防止に貢献する「コージェネレーションシステム」へもいち早く取り組み、2010年には、船舶のCO2排出削減に大きく寄与する「陸上電力供給システム」及び「船舶向け太陽光発電システム」の設計・施工を手掛けました。90年の歴史はフロンティア精神旺盛なチャレンジの歴史でもあります。国際規格ISO9000シリーズ、ISO14000シリーズ、ISO13485、OHSAS18001も取得済。
                         <br>2007年3月にはジャスダック証券取引所（現　株式会社東京証券取引所ジャスダック市場）へ上場しました。
                     </p>
                 </div>
+                <span class="block absolute bottom-full right-0 -z-1 mb:hidden">
+                    <img src="../images/message/img_pattern2.png" alt="pattern">
+                </span>
             </section>
-            <section class="company-bulletin">
+            <section class="company-bulletin relative z-0">
+                <span class="absolute top-5h left-0 w-full max-w-calc2-6h70 flex justify-end z-1 mb:hidden">
+                    <img src="../images/message/img_pattern1.png" alt="pattern">
+                </span>
                 <div class="container">
-                    <ul class="company-bulletin-boards">
+                    <ul class="company-bulletin-boards relative">
                         <li class="company-bulletin-board odd">
                             <figure class="company-bulletin-img">
                                 <img src="../images/company/img_photo1.jpg" alt="船舶用システム製品" />
@@ -382,6 +386,15 @@
             <p>Copyright © TERASAKI ELECTRIC CO.,LTD All rights reserved</p>
         </div>
     </footer>
+    <div class="loading">
+        <div class="loading-icon">
+        </div>
+        <div class="loading-text">Loading
+            <span class="loading-dots">.</span>
+            <span class="loading-dots">.</span>
+            <span class="loading-dots">.</span>
+        </div>
+    </div>
     <script src="../assets/js/jquery-3.5.1.min.js"></script>
     <script src="../js/common.js"></script>
 </body>
