@@ -944,6 +944,10 @@
   max-width: calc(50% - 670px);
 }
 
+.hover\:opacity-80:hover {
+  opacity: 0.8;
+}
+
 .overflow-auto {
   overflow: auto;
 }
@@ -1507,6 +1511,20 @@
 
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;
+}
+
+.transition-all {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 150ms;
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
 }
 
 @-webkit-keyframes spin {
