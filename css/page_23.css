@@ -1,3 +1,11 @@
+.c-blue {
+    color: #2e6fef !important;
+}
+
+.c-purple {
+    color: #0f55a1 !important;
+}
+
 .cm .cm__box {
     width: 100%;
     display: flex;
@@ -176,6 +184,10 @@
     line-height: 1.68;
 }
 
+.user-comment .comment p+p {
+    margin-top: 20px;
+}
+
 .tab-container {
     width: 100%;
     max-width: 834px;
@@ -208,6 +220,16 @@
     border-left: 4px solid #0f8ea1;
     padding-left: 26px;
     line-height: 1.8;
+}
+
+.tab-container .tab__title.c-blue {
+    color: #2e6fef;
+    border-left: 4px solid #2e6fef;
+}
+
+.tab-container .tab__title.c-purple {
+    color: #0f55a1;
+    border-left: 4px solid #0f55a1;
 }
 
 .tab-container .tab__image {
@@ -313,6 +335,14 @@
     background-color: #0f8ea1;
 }
 
+.tab-area.tab--03 .title-area .title__wrap::after {
+    background-color: #0f55a1;
+}
+
+.tab-area.tab--02 .title-area .title__wrap::after {
+    background-color: #2e6fef;
+}
+
 .tab-area .title-area .title__content {
     padding-top: 204px;
 }
@@ -404,12 +434,6 @@
 .tab-area.tab--01 .profile {
     margin-top: 182px;
     padding-top: 105px;
-}
-
-@media only screen and (max-width: 1599px) {}
-
-.tab-area.tab--02 {
-    margin-top: -19px;
 }
 
 .tab-area.tab--02 .title-area {
@@ -751,6 +775,14 @@
 .tab-area.tab--03 .profile {
     margin-top: 182px;
     padding-top: 105px;
+}
+
+.tab-area.tab--01 {
+    margin-top: -19px;
+}
+
+.tab-area.tab--03 {
+    margin-top: 19px;
 }
 
 @media only screen and (max-width: 1023px) {

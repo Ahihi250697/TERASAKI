@@ -26,8 +26,6 @@ function __close(_ch) {
             $(this).hasClass('active') ? $(this).removeClass('active').slideUp(0) : $(this).slideUp(0);
         })
     }
-
-    console.log('_open_tab');
 }
 
 __close("start");

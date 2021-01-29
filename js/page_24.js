@@ -1,5 +1,10 @@
-const _loading = $('.loading');
-let loading_remove = setTimeout(function() {
-    _loading.remove();
-    _js_question = $('.js-question');
-}, 1000);
+const __js_goto = $('.js-goto');
+
+__js_goto.on('click', function(e) {
+    e.preventDefault();
+    let _goto = $(this).attr('href');
+    let _h = $(_goto).offset().top - 100;
+    $('html, body').animate({
+        scrollTop: _h
+    }, 1000);
+})

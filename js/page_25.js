@@ -174,8 +174,6 @@ _js_question.on('click', function() {
     }
 });
 
-const _loading = $('.loading');
-let loading_remove = setTimeout(function() {
-    _loading.remove();
+let _set = setTimeout(function() {
     _js_question = $('.js-question');
 }, 3000);
