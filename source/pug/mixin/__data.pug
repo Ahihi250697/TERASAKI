@@ -23,14 +23,14 @@ mixin odomete(content, class1, class2, class3, title, class4, class5)
 		.block-odomete(class = fo_class)
 			span.block.leading-none(class= fi_class)!= title
 			if content[1]
-				.odomete-warp.flex.leading-none(class= f_class)
+				.odomete-warp.flex.leading-none(class= f_class + ' mb:mt-0')
 					.js-odomete.tracking-widest(class= s_class + ' mb:text-3ty5 mb:mt-0')= content[0]
 					span.last-text.block(class= t_class + ' mb:text-2ty')= content[1]
 			else 
 				.js-odomete.tracking-widest(class= f_class + ' mb:text-3ty5 mb:mt-0')= content[0]
 	else 
 		if content[1]
-			.odomete-warp.flex.leading-none(class= f_class)
+			.odomete-warp.flex.leading-none(class= f_class + ' mb:mt-0')
 				.js-odomete.tracking-widest(class= s_class + ' mb:text-3ty5 mb:mt-0')= content[0]
 				span.last-text.block(class= t_class + ' mb:text-2ty')!= content[1]
 		else 
@@ -46,14 +46,14 @@ mixin odomete2(content, class1, class2, class3)
 		- s_class= class2 
 	if class3 
 		- t_class= class3
-	.block-odomete.flex.items-end.tracking-widest(class = f_class)
-		.odomete-warp.leading-none(class= s_class)= content[0]
-		span.block.leading-none(class= t_class)!= content[1]
-		.odomete-warp.leading-none(class= s_class)= content[2]
+	.block-odomete.flex.items-end.tracking-widest(class = f_class + ' mb:mt-0')
+		.js-odomete.leading-none(class= s_class + ' mb:text-3ty5')= content[0]
+		span.block.leading-none(class= t_class + ' mb:text-2ty')!= content[1]
+		.js-odomete.leading-none(class= s_class + ' mb:text-3ty5')= content[2]
 		if content[3]
-			span.block.leading-none(class= t_class)!= content[3]
-			.odomete-warp.leading-none(class= s_class)= content[4]
-			span.block.leading-none(class= t_class)!= content[5]
+			span.block.leading-none(class= t_class + ' mb:text-2ty')!= content[3]
+			.js-odomete.leading-none(class= s_class + ' mb:text-3ty5')= content[4]
+			span.block.leading-none(class= t_class + ' mb:text-2ty')!= content[5]
 	if block 
 		block
 
@@ -63,25 +63,28 @@ mixin textsub(content, n_class)
 		- a_class= n_class
 	p.text-center.text-1ty3.font-medium.leading-none(class= a_class + ' mb:mt-1ty5')= content
 
-mixin blockimg(img, title, addClass, classp, classf, v_block)
+mixin blockimg(img, title, addClass, classp, classf, v_block, classlast)
 	- var c_name= ''
 	- var textalt= ''
 	- var content= ''
 	- var p_class= ''
 	- var f_class= ''
+	- var m_class= ''
 	if addClass
 		- c_name= addClass
 	if classp 
 		- p_class= classp
 	if classf
 		- f_class= classf
+	if classlast 
+		- m_class= classlast
 	each text,index in title
 		- textalt+= text
 		if index == (title.length - 1)
 			- content+= text
 		else
 			- content+= text + '<br>'
-	div(class= name_c + '-inner p-2ty').h-full.w-full.relative.z-0.flex.justify-center.items-center
+	div(class= name_c + '-inner py-2ty ' + m_class).h-full.w-full.relative.z-0.flex.justify-center.items-center
 		if img
 			figure(class= name_c + '-img' + f_class).absolute.p-2ty.-z-1.top-0.left-0.w-full.h-full.flex.justify-center.items-center
 				img(src= path + 'images/data/img_' + img + '.png', alt= textalt, class='mb:max-w-none mb:h-full').max-w-full.w-auto
@@ -91,17 +94,17 @@ mixin blockimg(img, title, addClass, classp, classf, v_block)
 				if block
 					block
 		else 
-			div(class= name_c + '-content mr-6ty pl-4ty' + c_name)
+			div(class= name_c + '-content mr-6ty pl-4ty mb:mr-0 mb:pl-0' + c_name)
 				p.text-2ty.font-bold.text-grey-option7.text-center.leading-tight(class= p_class + ' mb:text-default mb:mb-1ty5')!= content 
-				p.text-center.text-1ty3.font-medium.leading-none.mt-3ty 2018年度
+				p.text-center.text-1ty3.font-medium.leading-none.mt-3ty(class="mb:mt-0") 2018年度
 			if block
 				block
 mixin pie(title, pie)
 	.pie-inner.w-full
-		.flex.justify-between.w-full.max-w-4h60.mx-auto
-			p.text-2ty.font-bold.text-grey-option7.text-center.leading-tight= title
+		.flex.justify-between.w-full.max-w-4h60.mx-auto(class="mb:block")
+			p.text-2ty.font-bold.text-grey-option7.text-center.leading-tight(class="mb:mb-2ty")= title
 			figure
-				img(src= path + 'images/data/img_' + pie + '.png', alt= title)
+				img(src= path + 'images/data/img_' + pie + '.png', alt= title, class="mb:max-w-3h50 mb:mx-auto")
 		if block 
 			block
 mixin lineHeight(c_name)
@@ -114,4 +117,4 @@ mixin lineWidth(c_name)
 	span.block.bg-grey-option6.absolute.h-2p.w-calc-3ty(class= 'transform -translate-x-1/2 left-2/4 ' + c_name)
 
 mixin lineW(c_name)
-	span.hidden.bg-grey-option6.absolute.h-2p.w-full.left-0(class= 'mb:block ' + c_name)
+	span.hidden.bg-grey-option6.absolute.h-2p.w-full.left-0(class= 'tl:block mb:hidden ' + c_name)

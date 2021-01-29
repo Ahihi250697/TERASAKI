@@ -6,13 +6,13 @@ include ../mixin/__data.pug
 - var banner= [false, 'DATA', '数字で見るTERASAKI', true]
 - var mc = 'data'
 - var cm_p= 'tracking-wider leading-1lv9'
-- var cm_grid= 'grid-cols-2 grid mb:grid-cols-1'
+- var cm_grid= 'grid-cols-2 grid tl:grid-cols-1 tl:grid-rows-2 mb:grid-rows-none'
 - var grid_child= 'grid-cols-2 grid-rows-2 grid mb:grid-cols-1'
 doctype html
 html
 	head 
 		include ../components/__meta.pug
-		+head('DATA', ['assets/css/reset.css', 'assets/css/bootstrap_custom.css', 'css/common.css', 'css/tailwind.css'], true )
+		+head('DATA', ['assets/css/reset.css', 'assets/css/bootstrap_custom.css', 'css/common.css', 'css/tailwind.css', 'css/fixie.css'], true )
 	body 
 		include ../layout/__header.pug
 		main(class= mc).font-medium
@@ -29,16 +29,16 @@ html
 						include ../layout/data/__block2.pug
 					ul.parent-list.font-bold(class= cm_grid)
 						include ../layout/data/__block3.pug
-					ul.parent-list.font-bold.grid.grid-cols-121fr(class="mb:grid-rows-2 mb:grid-cols-none")
+					ul.parent-list.font-bold.grid.grid-cols-121fr(class="mb:grid-cols-1 tl:grid-cols-2")
 						include ../layout/data/__block4.pug
-					ul.parent-list.font-bold.grid.grid-cols-31fr
+					ul.parent-list.font-bold.grid.grid-cols-31fr(class="tl:grid-cols-1")
 						include ../layout/data/__block5.pug
-					ul.parent-list.font-bold.grid.grid-cols-4
+					ul.parent-list.font-bold.grid.grid-cols-4(class="mb:grid-cols-1 tl:grid-cols-2")
 						include ../layout/data/__block6.pug
 				- mc= 'blockTwo'
 				div(class= mc).mt-6ty.mb-1h
 					+title('会社実績')
-					ul.parent-list.font-bold.grid.grid-cols-4.grid-rows-2.mt-4ty(class="mb:grid-cols-2 mb:grid-rows-4")
+					ul.parent-list.font-bold.grid.grid-cols-4.grid-rows-2.mt-4ty(class="mb:grid-cols-1 tl:grid-cols-2")
 						include ../layout/data/__block7.pug
 					.container
 					- mc= 'blockTwo'

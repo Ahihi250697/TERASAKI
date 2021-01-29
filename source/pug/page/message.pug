@@ -11,7 +11,7 @@ doctype html
 html
 	head 
 		include ../components/__meta.pug
-		+head('MESSAGE', ['assets/css/reset.css', 'assets/css/bootstrap_custom.css', 'css/common.css', 'css/tailwind.css'], true )
+		+head('MESSAGE', ['assets/css/reset.css', 'assets/css/bootstrap_custom.css', 'css/common.css', 'css/tailwind.css', 'css/fixie.css'], true )
 	body 
 		include ../layout/__header.pug
 		main(class= mc).font-medium
@@ -49,7 +49,7 @@ html
 							p(class= cm_p + ' tl:pl-0 mb:mt-3ty mb:pb-4ty').mt-lv7_5.max-w-835.pl-lv3_5.pr-4.pb-lv5.relative!= `当社はどの系列にも属さない独立系の専業メーカーであることからも、様々な企業様とお付き合いすることができます。また、先程申し上げた5つの事業を展開することで経営リスクの分散が実現すると同時に、長いキャリアの中で、複数の分野のビジネスに携わり経験を積むチャンスがあるとも言えるでしょう。`
 								span.block.absolute.-z-1.-right-lv2.bottom-0.w-screen.bg-green-custom1.h-6h
 				- mc= 'blockLast'
-				section(class= mc + ' mb:mt-7ty').mt-lv16.relative.z-0
+				section(class= mc + ' mb:mt-7ty mb:mb-6ty').mt-lv16.relative.z-0.mb-1h
 					div(class= mc + '-img').relative
 						span.block.aspect-w-16.aspect-h-5.bg-mesBg.bg-no-repeat.bg-cover(class="mb:pb-2h mb:bg-right")
 						div(class= mc + '-img-above -translate-x-1/2 left-2/4 tl:inset-auto tl:relative tl:transform-none tl:max-w-full').max-w-132lv.w-full.absolute.z-1.bottom-0.transform.h-calc-2ty.max-h-4h10

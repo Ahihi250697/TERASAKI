@@ -1,7 +1,7 @@
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
-  purge: [],
+  purge: ['./**/*.html'],
   // prefix: 'tw-',
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -187,9 +187,11 @@ module.exports = {
         '1h50': '150px',
         '2h': '200px',
         '3h50': '350px',
-        '4h80': '480px',
+        '4h': '400px',
         '4h50': '450px',
         '4h60': '460px',
+        '4h80': '480px',
+        '5h10': '510px',
         '9h15': '915px',
         '6h50': '650px',
         '1th': '1000px',

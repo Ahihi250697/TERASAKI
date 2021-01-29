@@ -9,17 +9,19 @@ const imagemin = require('gulp-imagemin');
 const prettyhtml = require('gulp-format-html');
 // const plumber = require('gulp-plumber');
 const ejs = require('gulp-ejs');
+const removeCss = require('gulp-purgecss');
 
 const path = require('path');
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('autoprefixer');
 const tailwind = require('tailwindcss');
 
-// const cssnano = require('cssnano');
+const cssnano = require('cssnano');
 const postcssPresetEnv = require('postcss-preset-env');
 const sortMediaQueries = require('postcss-sort-media-queries');
 const perfectCss = require('perfectionist');
 const suit = require('postcss-bem-fix');
+const purgecss = require('@fullhuman/postcss-purgecss');
 
 gulp.task('browserSync', function() {
     browserSync.init({
@@ -122,17 +124,26 @@ gulp.task('css', function(){
 gulp.task('tailwind', function(){
     let processors = [
         tailwind(),
+        purgecss({
+            content: ['./**/*.html'],
+            defaultExtractor: content => content.match(/[\w-:/]+(?<!:)/g) || []
+          },
+          ),
         autoprefixer('last 2 versions', { cascade: false}),
-        perfectCss({
-            cascade: true,
-            sourcemap: true,
-            colorCase: 'lower',
-            colorShorthand: true,
-            trimLeadingZero: true
-        })
+        cssnano,
+        // perfectCss({
+        //     cascade: true,
+        //     sourcemap: true,
+        //     colorCase: 'lower',
+        //     colorShorthand: true,
+        //     trimLeadingZero: true
+        // })
     ];
     return gulp.src('./source/tailwind.css')
         .pipe(postcss(processors))
+        // .pipe(removeCss({
+        //     content: ['./**/*.html']
+        // }))
         .pipe(gulp.dest('./css/'))
         .pipe(browserSync.reload({
             stream: true
