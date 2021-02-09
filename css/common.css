@@ -259,6 +259,12 @@ figure img {
     letter-spacing: 12px;
     line-height: 1.55;
 }
+.footer__container .entry a {
+    color: #fff;
+}
+.footer__container .entry a:hover {
+    opacity: 0.8;
+}
 
 .footer__container .entry-desc {
     font-size: 1.8rem;
